@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ControlVet</string>
+    <string name="agregar">Agregar Datos</string>
+    <string name="ver">Visualizar Datos</string>
+    <string name="notific">Agregar Notificaciones</string>
+    <string name="titulo1">FORMULARIO PARA AGREGAR MASCOTAS</string>
+    <string name="titulo2">Datos del propietario</string>
+    <string name="vacunas">Agregar Vacunas</string>
 </resources>

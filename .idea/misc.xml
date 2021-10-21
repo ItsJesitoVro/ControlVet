@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jesito/Desktop/Proyecto Estancia/ControlVet/app/src/main/res/layout/activity_agregar_datos.xml" value="0.25" />
         <entry key="..\:/Users/Jesito/Desktop/Proyecto Estancia/ControlVet/app/src/main/res/layout/activity_main.xml" value="0.2341485507246377" />
+        <entry key="..\:/Users/Jesito/Desktop/Proyecto Estancia/ControlVet/app/src/main/res/layout/activity_notificaciones.xml" value="0.25" />
+        <entry key="..\:/Users/Jesito/Desktop/Proyecto Estancia/ControlVet/app/src/main/res/layout/activity_vacunas.xml" value="0.25" />
+        <entry key="..\:/Users/Jesito/Desktop/Proyecto Estancia/ControlVet/app/src/main/res/layout/activity_ver_datos.xml" value="0.2359375" />
+        <entry key="..\:/Users/Jesito/Desktop/Proyecto Estancia/ControlVet/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26614583333333336" />
       </map>
     </option>
   </component>

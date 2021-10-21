@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlVet">
         <activity
+            android:name=".vacunas"
+            android:exported="false" />
+        <activity
+            android:name=".notificaciones"
+            android:exported="false" />
+        <activity
+            android:name=".ver_datos"
+            android:exported="false" />
+        <activity
+            android:name=".agregar_datos"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
