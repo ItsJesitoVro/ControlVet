@@ -6,4 +6,5 @@
     <string name="titulo1">FORMULARIO PARA AGREGAR MASCOTAS</string>
     <string name="titulo2">Datos del propietario</string>
     <string name="vacunas">Agregar Vacunas</string>
+    <string name="todo">TODO</string>
 </resources>
