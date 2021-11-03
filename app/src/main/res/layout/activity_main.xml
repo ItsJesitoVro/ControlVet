@@ -14,19 +14,25 @@
         android:background="#00FFFFFF">
 
         <ImageView
-            android:id="@+id/icono"
+            android:id="@+id/logo"
             android:layout_width="186dp"
             android:layout_height="152dp"
             android:layout_marginStart="105dp"
             android:layout_marginTop="29dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="50dp"
             android:contentDescription="@string/todo"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@mipmap/ic_launcher_round"
-            tools:ignore="SpeakableTextPresentCheck"/></LinearLayout>
+            tools:ignore="SpeakableTextPresentCheck"/>
+    <Button
+        android:id="@+id/btnCrear"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:text="Base de datos"></Button>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
