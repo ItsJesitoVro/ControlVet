@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FFFFFF"
+    android:background="@drawable/fondo"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -31,7 +31,7 @@
         android:id="@+id/btnCrear"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:text="Base de datos"></Button>
+        android:text="@string/base_de_datos"></Button>
     </LinearLayout>
 
     <ScrollView
@@ -45,19 +45,24 @@
 
             <Button
                 android:id="@+id/button"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="166dp"
                 android:layout_height="83dp"
                 android:layout_marginStart="122dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="50dp"
+                android:backgroundTint="#79FF0000"
                 android:onClick="Siguiente1"
                 android:text="@string/agregar"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
                 app:layout_constraintBottom_toTopOf="@+id/button2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.463" />
+                app:layout_constraintVertical_bias="0.463"
+                app:strokeColor="@color/black" />
 
             <Button
                 android:id="@+id/button2"
@@ -73,7 +78,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                style="?attr/materialButtonOutlinedStyle"
+                android:backgroundTint="#79FF0000"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/black"/>
 
             <Button
                 android:id="@+id/button3"
@@ -87,7 +97,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2" />
+                app:layout_constraintTop_toBottomOf="@+id/button2"
+                style="?attr/materialButtonOutlinedStyle"
+                android:backgroundTint="#79FF0000"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/black"/>
 
             <Button
                 android:id="@+id/button4"
@@ -100,7 +115,12 @@
                 android:text="@string/vacunas"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button3" />
+                app:layout_constraintTop_toBottomOf="@+id/button3"
+                style="?attr/materialButtonOutlinedStyle"
+                android:backgroundTint="#79FF0000"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/black"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

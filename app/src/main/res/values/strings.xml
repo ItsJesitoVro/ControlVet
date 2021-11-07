@@ -7,4 +7,5 @@
     <string name="titulo2">Datos del propietario</string>
     <string name="vacunas">Agregar Vacunas</string>
     <string name="todo">TODO</string>
+    <string name="base_de_datos">Base de datos</string>
 </resources>
