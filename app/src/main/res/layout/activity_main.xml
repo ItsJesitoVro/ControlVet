@@ -21,17 +21,26 @@
             android:layout_marginTop="29dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="50dp"
+            android:background="@drawable/circuloicono"
             android:contentDescription="@string/todo"
+            android:rotation="0"
+            android:rotationY="0"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@mipmap/ic_launcher_round"
-            tools:ignore="SpeakableTextPresentCheck"/>
+            tools:ignore="SpeakableTextPresentCheck" />
+
     <Button
         android:id="@+id/btnCrear"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:text="@string/base_de_datos"></Button>
+        android:text="@string/base_de_datos"
+        style="?attr/materialButtonOutlinedStyle"
+        android:backgroundTint="#79FF0000"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:strokeColor="@color/black"
+        ></Button>
     </LinearLayout>
 
     <ScrollView

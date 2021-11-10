@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/fondo"
     tools:context=".ver_datos"
     android:orientation="vertical">
 
@@ -23,7 +24,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_revert"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            style="?attr/materialButtonOutlinedStyle"
+            android:backgroundTint="#79FF0000"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/black"/>
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="80dp"
@@ -38,7 +44,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@android:drawable/ic_popup_sync"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            style="?attr/materialButtonOutlinedStyle"
+            android:backgroundTint="#79FF0000"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/black"/>
 
         <ImageButton
             android:id="@+id/imageButton4"
@@ -54,7 +65,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@android:drawable/ic_menu_save"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            style="?attr/materialButtonOutlinedStyle"
+            android:backgroundTint="#79FF0000"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/black"/>
 
     </LinearLayout>
 
@@ -89,11 +105,16 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Buscar">
+                android:text="Buscar"
+                style="?attr/materialButtonOutlinedStyle"
+                android:backgroundTint="#79FF6600"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/black">
 
             </Button></LinearLayout>
             <EditText
-                android:id="@+id/nombre_mascota"
+                android:id="@+id/txtnommascota"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
@@ -120,7 +141,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/textView4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nombre_mascota" />
+                app:layout_constraintTop_toBottomOf="@+id/txtnommascota" />
 
             <LinearLayout
                 android:layout_width="match_parent"

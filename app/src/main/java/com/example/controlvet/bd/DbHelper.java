@@ -10,10 +10,10 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_MASCOTAS = "mascotas.bd";
-    private static final String TABLE_MASCOTAS = "t_mascotas";
-    private static final String TABLE_PROPIETARIO = "t_propietario";
-    private static final String TABLE_VACUNAS = "t_vacunas";
-    private static final String TABLE_RECORDAR = "t_recordar";
+    public static final String TABLE_MASCOTAS = "t_mascotas";
+    public static final String TABLE_PROPIETARIO = "t_propietario";
+    public static final String TABLE_VACUNAS = "t_vacunas";
+    public static final String TABLE_RECORDAR = "t_recordar";
 
     public DbHelper(@Nullable Context context) {
         super(context, DATABASE_MASCOTAS, null, DATABASE_VERSION);
@@ -24,22 +24,22 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_MASCOTAS + "(" +
                 "identificador INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "microchip TEXT NOT NULL," +
-                "nombre TEXT NOT NULL," +
-                "raza TEXT NOT NULL," +
-                "nacimiento NUMERIC NOT NULL," +
-                "color TEXT NOT NULL," +
-                "tipo_mascota TEXT NOT NULL," +
-                "sexo TEXT NOT NULL," +
+                "microchip TEXT," +
+                "nombre TEXT ," +
+                "raza TEXT ," +
+                "nacimiento TEXT," +
+                "color TEXT," +
+                "tipo_mascota TEXT," +
+                "sexo TEXT," +
                 "datos_extras TEXT)");
 
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_PROPIETARIO + "(" +
-            "identificador INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "nombre TEXT NOT NULL," +
-            "celular TEXT NOT NULL," +
-            "direccion TEXT NOT NULL," +
-            "correo TEXT DEFAULT NULL," +
-            "datos_extras TEXT)");
+                "identificador INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "nombre TEXT," +
+                "celular TEXT," +
+                "direccion TEXT," +
+                "correo TEXT," +
+                "datos_extras TEXT)");
 
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_VACUNAS + "(" +
                 "identificador INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -60,10 +60,13 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
-        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_MASCOTAS);
-        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_PROPIETARIO);
-        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_VACUNAS);
-        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_RECORDAR);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_MASCOTAS);
+        onCreate(sqLiteDatabase);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_PROPIETARIO);
+        onCreate(sqLiteDatabase);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_VACUNAS);
+        onCreate(sqLiteDatabase);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_RECORDAR);
         onCreate(sqLiteDatabase);
 
     }

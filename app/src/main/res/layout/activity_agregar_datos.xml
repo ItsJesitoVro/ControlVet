@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/fondo"
     tools:context=".agregar_datos">
 
 
@@ -16,16 +17,20 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
+            android:backgroundTint="#79FF0000"
             android:onClick="Regresar"
+            app:cornerRadius="20dp"
             app:layout_constraintEnd_toStartOf="@+id/imageButton3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_revert"
+            app:strokeColor="@color/black"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -42,10 +47,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@android:drawable/ic_popup_sync"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            style="?attr/materialButtonOutlinedStyle"
+            android:backgroundTint="#79FF0000"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/black"/>
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/btnGuardar"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
@@ -58,7 +68,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@android:drawable/ic_menu_save"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            style="?attr/materialButtonOutlinedStyle"
+            android:backgroundTint="#79FF0000"
+            android:textColor="#79FF0000"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/black"/>
 
     </LinearLayout>
 
@@ -87,7 +102,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/nombre_mascota"
+                android:id="@+id/txtnommascota"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
@@ -102,7 +117,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/txtraza"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="5dp"
@@ -114,7 +129,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/textView4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nombre_mascota" />
+                app:layout_constraintTop_toBottomOf="@+id/txtnommascota" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -122,7 +137,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editTextDate"
+                    android:id="@+id/txtnacimiento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -151,7 +166,7 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/txtcolor"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
@@ -165,72 +180,39 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="230dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3">
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:text="Felino" />
-
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="Canino"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </RadioGroup>
-
-            <RadioGroup
-                android:id="@+id/radioGroup2"
-                android:layout_width="230dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/radioGroup"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:layout_constraintVertical_bias="0.0">
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="116dp"
-                    android:layout_height="wrap_content"
-                    android:text="Macho" />
-
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Hembra" />
-            </RadioGroup>
-
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/txttipomascota"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:hint="No. IDENTIFICACIÓN">
-
-            </EditText>
+                android:ems="10"
+                android:hint="Tipo de mascota (felino, canino, entre otros)"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"></EditText>
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/txtsexo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Sexo (Macho, Hembra)"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"></EditText>
+
+
+            <EditText
+                android:id="@+id/txtmicrochip"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
@@ -241,6 +223,7 @@
             </EditText>
 
             <EditText
+                android:id="@+id/txtextras"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginStart="1dp"
@@ -265,6 +248,17 @@
             </TextView>
 
             <EditText
+                android:id="@+id/txtidentificador"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:enabled="true"
+                android:hint="No. IDENTIFICACIÓN"></EditText>
+
+            <EditText
+                android:id="@+id/txtnompro"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
@@ -279,6 +273,7 @@
             </EditText>
 
             <EditText
+                android:id="@+id/txtcelular"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
@@ -293,6 +288,7 @@
             </EditText>
 
             <EditText
+                android:id="@+id/txtdireccion"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginStart="1dp"
@@ -307,6 +303,7 @@
             </EditText>
 
             <EditText
+                android:id="@+id/txtcorreo"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
@@ -321,6 +318,7 @@
             </EditText>
 
             <EditText
+                android:id="@+id/txtextras2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginStart="1dp"
