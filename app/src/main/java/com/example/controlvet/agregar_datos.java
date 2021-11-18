@@ -53,7 +53,7 @@ public class agregar_datos extends AppCompatActivity {
                     Toast.makeText(agregar_datos.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
                     limpiar();
                 } else {
-                    Toast.makeText(agregar_datos.this, "EROR AL GUARDAR EL REGISTRO", Toast.LENGTH_LONG).show();
+                    Toast.makeText(agregar_datos.this, "ERROR AL GUARDAR EL REGISTRO", Toast.LENGTH_LONG).show();
                 }
 
             }

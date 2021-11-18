@@ -2,9 +2,14 @@ package com.example.controlvet.bd;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
+
+import com.example.controlvet.entidades.Contactos;
+
+import java.util.ArrayList;
 
 public class DbMascotas extends DbHelper {
 
@@ -40,4 +45,58 @@ public class DbMascotas extends DbHelper {
 
         return id;
     }
+
+    public ArrayList<Contactos> mostrarContactos(){
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase bd = dbHelper.getWritableDatabase();
+
+        ArrayList<Contactos> listaContactos = new ArrayList<>();
+        Contactos contactos = null;
+        Cursor cursorContactos = null;
+
+        cursorContactos = bd.rawQuery("SELECT * FROM " + TABLE_MASCOTAS, null);
+
+        if (cursorContactos.moveToFirst()){
+            do {
+                contactos = new Contactos();
+                contactos.setMicrochip(cursorContactos.getString(1));
+                contactos.setNombreM(cursorContactos.getString(2));
+                contactos.setNacimiento(cursorContactos.getString(4));
+                contactos.setColor(cursorContactos.getString(5));
+                contactos.setTipo_mascota(cursorContactos.getString(6));
+                contactos.setSexo(cursorContactos.getString(7));
+                contactos.setDatos_extras(cursorContactos.getString(8));
+                listaContactos.add(contactos);
+            } while (cursorContactos.moveToNext());
+        }
+        cursorContactos.close();
+
+        return listaContactos;
+    }
+
+    public Contactos verContactos(int identificador){
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase bd = dbHelper.getWritableDatabase();
+
+        Contactos contactos = null;
+        Cursor cursorContactos;
+
+        cursorContactos = bd.rawQuery("SELECT * FROM " + TABLE_MASCOTAS + " WHERE identificador = " + identificador + " LIMIT 1", null);
+
+        if (cursorContactos.moveToFirst()){
+            contactos = new Contactos();
+            contactos.setMicrochip(cursorContactos.getString(1));
+            contactos.setNombreM(cursorContactos.getString(2));
+            contactos.setRaza(cursorContactos.getString(3));
+            contactos.setNacimiento(cursorContactos.getString(4));
+            contactos.setColor(cursorContactos.getString(5));
+            contactos.setTipo_mascota(cursorContactos.getString(6));
+            contactos.setSexo(cursorContactos.getString(7));
+            contactos.setDatos_extras(cursorContactos.getString(8));
+        }
+        cursorContactos.close();
+
+        return contactos;
+    }
+
 }

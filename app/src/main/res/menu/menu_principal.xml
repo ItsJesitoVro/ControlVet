@@ -5,4 +5,8 @@
     <item
         android:id="@+id/menuNuevo"
         android:title="Nuevo Registro" />
+
+    <item
+        android:id="@+id/menuVer"
+        android:title="Ver Registros Registro" />
 </menu>

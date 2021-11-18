@@ -4,6 +4,8 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Context;
@@ -20,7 +22,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.controlvet.adaptadores.ListaMascotasAdapter;
 import com.example.controlvet.bd.DbHelper;
+import com.example.controlvet.bd.DbMascotas;
+import com.example.controlvet.entidades.Contactos;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DbMascotas dbMascotas = new DbMascotas(MainActivity.this);
 
         verificarPermisos();
 
@@ -85,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menuNuevo:
                 nuevoregistro();
                 return true;
+            case R.id.menuVer:
+                verRegistro();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -92,6 +104,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void nuevoregistro(){
         Intent intent = new Intent(this, agregar_datos.class);
+        startActivity(intent);
+    }
+
+    private void verRegistro(){
+        Intent intent = new Intent(this, VerDatos.class);
         startActivity(intent);
     }
 
