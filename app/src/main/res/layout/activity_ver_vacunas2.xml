@@ -4,31 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/fondo"
-    tools:context=".VerDatos"
-    android:orientation="vertical">
+    tools:context=".verVacunas2">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Datos mascotas"
-        android:textSize="50dp"
-        android:textColor="@color/cardview_dark_background"></TextView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listapersona"
-        android:layout_width="match_parent"
-        android:layout_height="200dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Datos Propietarios"
+        android:text="Vacunas Aplicadas"
         android:textSize="40dp"
         android:textColor="@color/cardview_dark_background"></TextView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listadueño"
+        android:id="@+id/listavacunas"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

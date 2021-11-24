@@ -20,7 +20,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:onClick="Regresar"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+            app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_revert"
@@ -31,7 +31,7 @@
             app:cornerRadius="20dp"
             app:strokeColor="@color/black"/>
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/btnLimpiar"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
@@ -39,7 +39,7 @@
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+            app:layout_constraintEnd_toStartOf="@+id/btnGuardarV"
             app:layout_constraintStart_toEndOf="@+id/imageButton2"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
@@ -52,7 +52,7 @@
             app:strokeColor="@color/black"/>
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/btnGuardarV"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
@@ -61,7 +61,7 @@
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageButton3"
+            app:layout_constraintStart_toEndOf="@+id/btnLimpiar"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@android:drawable/ic_menu_save"
@@ -139,7 +139,7 @@
                 android:ems="10"
                 android:hint="Raza"
                 android:inputType="textPersonName"
-                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintBottom_toTopOf="@+id/btnAplicada"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtnommascota" />
@@ -159,13 +159,13 @@
                     android:hint="DD/MM/AAAA"
                     android:inputType="date"
                     android:minHeight="48dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintEnd_toStartOf="@+id/btnAplicada"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="@+id/btnAplicada"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/btnAplicada"
                     android:layout_width="115dp"
                     android:layout_height="45dp"
                     android:layout_marginEnd="4dp"
@@ -174,7 +174,7 @@
                     android:textSize="20sp"
                     app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/editTextDate"
+                    app:layout_constraintStart_toEndOf="@+id/txtAplicada"
                     app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
             </LinearLayout>
 
@@ -191,7 +191,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/btnAplicada" />
 
                 <EditText
             android:id="@+id/txttipomascota"
@@ -206,7 +206,7 @@
             app:layout_constraintBottom_toTopOf="@+id/radioGroup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"></EditText>
+            app:layout_constraintTop_toBottomOf="@+id/btnAplicada"></EditText>
 
             <EditText
                 android:id="@+id/txtsexo"
@@ -221,7 +221,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"></EditText>
+                app:layout_constraintTop_toBottomOf="@+id/btnAplicada"></EditText>
 
             <EditText
                 android:id="@+id/extra"

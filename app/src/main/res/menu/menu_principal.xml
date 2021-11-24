@@ -8,5 +8,17 @@
 
     <item
         android:id="@+id/menuVer"
-        android:title="Ver Registros Registro" />
+        android:title="Ver Registros" />
+
+    <item
+        android:id="@+id/menuAddVacuna"
+        android:title="Aplicar Vacuna" />
+
+    <item
+        android:id="@+id/menuVerVacunas"
+        android:title="Ver Vacunas Aplicadas" />
+
+    <item
+        android:id="@+id/menuAddNoti"
+        android:title="Agregar notificación" />
 </menu>

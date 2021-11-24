@@ -21,7 +21,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:onClick="Regresar"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+            app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_revert"
@@ -31,47 +31,39 @@
             android:textColor="@color/white"
             app:cornerRadius="20dp"
             app:strokeColor="@color/black"/>
+
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/btnLimpiar"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="10dp"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+            app:layout_constraintEnd_toStartOf="@+id/btnGuardarV"
             app:layout_constraintStart_toEndOf="@+id/imageButton2"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@android:drawable/ic_popup_sync"
-            tools:ignore="SpeakableTextPresentCheck"
-            style="?attr/materialButtonOutlinedStyle"
-            android:backgroundTint="#79FF0000"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp"
-            app:strokeColor="@color/black"/>
+            app:strokeColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/btnGuardarN"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageButton3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@android:drawable/ic_menu_save"
-            tools:ignore="SpeakableTextPresentCheck"
-            style="?attr/materialButtonOutlinedStyle"
-            android:backgroundTint="#79FF0000"
+            android:background="@android:drawable/ic_menu_save"
             android:textColor="@color/white"
             app:cornerRadius="20dp"
-            app:strokeColor="@color/black"/>
+            app:layout_constraintStart_toEndOf="@+id/btnLimpiar"
+            app:strokeColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>
 
@@ -86,35 +78,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:hint="Identificador"
-                    android:inputType="text"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="30dp"
-                    android:ems="10"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                </EditText>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Buscar"
-                    style="?attr/materialButtonOutlinedStyle"
-                    android:backgroundTint="#79FF6600"
-                    android:textColor="@color/white"
-                    app:cornerRadius="20dp"
-                    app:strokeColor="@color/black">
-
-                </Button></LinearLayout>
+                android:orientation="horizontal"/>
 
             <EditText
+                android:id="@+id/txtTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="1dp"
@@ -130,14 +97,15 @@
             </EditText>
 
             <EditText
+                android:id="@+id/txtDetalle"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:hint="Detalles del recordatorio"
-                android:inputType="text"
                 android:layout_marginStart="1dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="30dp"
                 android:ems="10"
+                android:hint="Detalles del recordatorio"
+                android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -149,7 +117,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editTextDate"
+                    android:id="@+id/txtFecha"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -158,23 +126,24 @@
                     android:hint="DD/MM/AAAA"
                     android:inputType="date"
                     android:minHeight="48dp"
-                    app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintEnd_toStartOf="@+id/btnAplicada"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="@+id/btnAplicada"
                     tools:ignore="SpeakableTextPresentCheck" />
 
-                <TextView
-                    android:id="@+id/textView4"
+                <Button
+                    android:id="@+id/btnFecha"
                     android:layout_width="150dp"
-                    android:layout_height="50dp"
+                    android:layout_height="60dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="33dp"
                     android:text="Fecha a recordar"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/editTextDate"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+                    android:textSize="15dp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:backgroundTint="#EC7D28"
+                    android:textColor="@color/white"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -183,6 +152,7 @@
                 android:orientation="horizontal">
 
                 <EditText
+                    android:id="@+id/txtHora"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -193,16 +163,22 @@
                     android:minHeight="48dp"
                     tools:ignore="SpeakableTextPresentCheck" />
 
-                <TextView
+                <Button
+                    android:id="@+id/btnHora"
                     android:layout_width="150dp"
-                    android:layout_height="50dp"
+                    android:layout_height="60dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="33dp"
                     android:text="Hora a recordar"
-                    android:textSize="20sp"
+                    android:textSize="15dp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:backgroundTint="#EC7D28"
+                    android:textColor="@color/white"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="@color/black"
                     app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/editTextDate"
+                    app:layout_constraintStart_toEndOf="@+id/txtAplicada"
                     app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
             </LinearLayout>
 
@@ -212,7 +188,19 @@
                 android:text="Nota: Recuerda que te notificara en el transcurso de la hora en la que allas configurado el recordatorio"
                 android:textSize="20dp">
 
+
             </TextView>
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?attr/materialButtonOutlinedStyle"
+                android:backgroundTint="#79FF0000"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/black"
+                android:text="Eliminar Recordatorio" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

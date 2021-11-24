@@ -12,8 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlVet">
         <activity
+            android:name=".verVacunas2"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".VerDatos"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".vacunas"
             android:exported="false"

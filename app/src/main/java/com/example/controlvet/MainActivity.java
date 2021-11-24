@@ -97,6 +97,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menuVer:
                 verRegistro();
                 return true;
+            case R.id.menuVerVacunas:
+                verVacunas();
+                return true;
+            case R.id.menuAddVacuna:
+                addVacunas();
+                return true;
+            case R.id.menuAddNoti:
+                addNoti();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -112,13 +121,28 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void verVacunas(){
+        Intent intent = new Intent(this, verVacunas2.class);
+        startActivity(intent);
+    }
+
+    private void addVacunas(){
+        Intent intent = new Intent(this, vacunas.class);
+        startActivity(intent);
+    }
+
+    private void addNoti(){
+        Intent intent = new Intent(this, notificaciones.class);
+        startActivity(intent);
+    }
+
     //Metodo el botón Siguiente
     public void Siguiente1(View view){
         Intent siguiente1 = new Intent(this, agregar_datos.class);
         startActivity(siguiente1);
     }
     public void Siguiente2(View view){
-        Intent siguiente2 = new Intent(this, ver_datos.class);
+        Intent siguiente2 = new Intent(this, VerDatos.class);
         startActivity(siguiente2);
     }
     public void Siguiente3(View view){

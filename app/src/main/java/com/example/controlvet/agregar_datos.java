@@ -17,7 +17,7 @@ import com.example.controlvet.bd.DbPropietario;
 public class agregar_datos extends AppCompatActivity {
 
     EditText txtmicrochip, txtnommascota, txtraza, txtnacimiento, txtcolor, txttipomascota, txtsexo, txtextras, txtnompro, txtcelular, txtdireccion, txtcorreo, txtextras2;
-    ImageButton btnGuardar;
+    ImageButton btnGuardar, btnLimpiar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class agregar_datos extends AppCompatActivity {
         txtsexo =  findViewById(R.id.txtsexo);
         txtextras = findViewById(R.id.txtextras);
         btnGuardar = findViewById(R.id.btnGuardar);
+        btnLimpiar = findViewById(R.id.btnLimpiar);
 
         txtnompro = findViewById(R.id.txtnompro);
         txtcelular = findViewById(R.id.txtcelular);
@@ -56,6 +57,12 @@ public class agregar_datos extends AppCompatActivity {
                     Toast.makeText(agregar_datos.this, "ERROR AL GUARDAR EL REGISTRO", Toast.LENGTH_LONG).show();
                 }
 
+            }
+        });
+        btnLimpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                limpiar();
             }
         });
     }

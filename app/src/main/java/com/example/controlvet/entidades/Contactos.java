@@ -18,6 +18,12 @@ public class Contactos {
     private String correo;
     private String datos_extras2;
 
+    private String MicroChip2;
+    private String vacuna;
+    private String diluente;
+    private String aplicado;
+    private String proximo;
+
 
     public int getIdentificador() {
         return identificador;
@@ -130,5 +136,45 @@ public class Contactos {
 
     public void setDatos_extras2(String datos_extras2) {
         this.datos_extras2 = datos_extras2;
+    }
+
+    public String getMicroChip2() {
+        return MicroChip2;
+    }
+
+    public void setMicroChip2(String microChip2) {
+        MicroChip2 = microChip2;
+    }
+
+    public String getVacuna() {
+        return vacuna;
+    }
+
+    public void setVacuna(String vacuna) {
+        this.vacuna = vacuna;
+    }
+
+    public String getDiluente() {
+        return diluente;
+    }
+
+    public void setDiluente(String diluente) {
+        this.diluente = diluente;
+    }
+
+    public String getAplicado() {
+        return aplicado;
+    }
+
+    public void setAplicado(String aplicado) {
+        this.aplicado = aplicado;
+    }
+
+    public String getProximo() {
+        return proximo;
+    }
+
+    public void setProximo(String proximo) {
+        this.proximo = proximo;
     }
 }
