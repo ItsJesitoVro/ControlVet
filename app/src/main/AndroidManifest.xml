@@ -3,6 +3,7 @@
     package="com.example.controlvet">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -12,13 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlVet">
         <activity
-            android:name=".verVacunas2"
+            android:name=".llamadas"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".verVacunas2"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".VerDatos"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".vacunas"
             android:exported="false"

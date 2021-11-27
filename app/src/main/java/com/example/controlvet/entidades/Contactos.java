@@ -24,6 +24,8 @@ public class Contactos {
     private String aplicado;
     private String proximo;
 
+    private String numero;
+
 
     public int getIdentificador() {
         return identificador;
@@ -176,5 +178,13 @@ public class Contactos {
 
     public void setProximo(String proximo) {
         this.proximo = proximo;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 }

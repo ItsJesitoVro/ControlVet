@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.controlvet.adaptadores.ListaVacunasAdapter;
 import com.example.controlvet.bd.DbVacuna;
@@ -31,5 +33,10 @@ public class verVacunas2 extends AppCompatActivity {
 
         ListaVacunasAdapter adapter = new ListaVacunasAdapter(dbVacuna.mostrarVacunas());
         listaVacunas.setAdapter(adapter);
+    }
+    //Metodo para el boton anterior
+    public void Regresar(View view){
+        Intent regresar = new Intent(this, MainActivity.class);
+        startActivity(regresar);
     }
 }

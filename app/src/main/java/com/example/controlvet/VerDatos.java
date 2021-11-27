@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.controlvet.adaptadores.ListaMascotasAdapter;
 import com.example.controlvet.adaptadores.ListaPropietarioAdapter;
@@ -40,5 +42,10 @@ public class VerDatos extends AppCompatActivity {
         ListaPropietarioAdapter adapter2 = new ListaPropietarioAdapter(dbDueño.mostrarDueño());
         listaContactos.setAdapter(adapter);
         listaDueño.setAdapter(adapter2);
+    }
+    //Metodo para el boton anterior
+    public void Regresar(View view){
+        Intent regresar = new Intent(this, MainActivity.class);
+        startActivity(regresar);
     }
 }

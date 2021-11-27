@@ -68,5 +68,4 @@ public class DbPropietario extends DbHelper {
 
         return listaDueño;
     }
-
 }

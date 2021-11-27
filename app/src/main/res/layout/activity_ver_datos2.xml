@@ -4,21 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
     tools:context=".VerDatos"
     android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/btnRegresar"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#79FF0000"
+        android:onClick="Regresar"
+        app:cornerRadius="20dp"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        app:strokeColor="@color/black"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Datos mascotas"
-        android:textSize="50dp"
+        android:textSize="40dp"
         android:textColor="@color/cardview_dark_background"></TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listapersona"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="300dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -30,5 +54,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listadueño"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="300dp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

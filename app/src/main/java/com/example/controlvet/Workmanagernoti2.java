@@ -1,17 +1,17 @@
 package com.example.controlvet;
 
+import android.Manifest;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
-import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
@@ -19,17 +19,16 @@ import androidx.work.WorkManager;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
-import java.io.PipedInputStream;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Workmanagernoti extends Worker {
-    public Workmanagernoti(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+public class Workmanagernoti2 extends Worker {
+    public Workmanagernoti2(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
     }
 
-    public static void GuardarNoti(long duracion, Data data, String tag){
-        OneTimeWorkRequest noti = new OneTimeWorkRequest.Builder(Workmanagernoti.class).setInitialDelay(duracion, TimeUnit.MILLISECONDS).addTag(tag).setInputData(data).build();
+    public static void GuardarNoti2(long duracion, Data data, String tag){
+        OneTimeWorkRequest noti = new OneTimeWorkRequest.Builder(Workmanagernoti2.class).setInitialDelay(duracion, TimeUnit.MILLISECONDS).addTag(tag).setInputData(data).build();
 
         WorkManager instance = WorkManager.getInstance();
         instance.enqueue(noti);
@@ -47,7 +46,6 @@ public class Workmanagernoti extends Worker {
 
         return Result.success();
     }
-
     private void oreo(String t, String d){
         String id = "message";
         NotificationManager nm = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
@@ -61,7 +59,7 @@ public class Workmanagernoti extends Worker {
             nm.createNotificationChannel(nc);
         }
 
-        Intent intent = new Intent(getApplicationContext(), notificaciones.class);
+        Intent intent = new Intent(getApplicationContext(), llamadas.class);
 
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),0, intent, PendingIntent.FLAG_ONE_SHOT);

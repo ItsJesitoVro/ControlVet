@@ -1,8 +1,12 @@
 package com.example.controlvet;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.work.Data;
 
 import android.app.DatePickerDialog;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,23 +14,27 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.controlvet.bd.DbVacuna;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.UUID;
 
 public class vacunas extends AppCompatActivity {
 
-    EditText txtMicroChip, txtVacuna, txtDiluente, txtAplicada, txtProxima;
+    EditText txtMicroChip, txtVacuna, txtDiluente, txtAplicada, txtProxima, txtHora, txtNumero;
     ImageButton btnGuardarV, btnLimpiar;
-    Button btnAplicada, btnProximo;
+    Button btnAplicada, btnProximo, btnHora;
 
     Calendar actual = Calendar.getInstance();
     Calendar calendar = Calendar.getInstance();
 
-    private int dia, mes, anio;
+    private PendingIntent pendingIntent;
+
+    private int dia, mes, anio, hora, minutos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +46,15 @@ public class vacunas extends AppCompatActivity {
         txtDiluente = findViewById(R.id.txtDiluente);
         txtAplicada = findViewById(R.id.txtAplicada);
         txtProxima= findViewById(R.id.txtProxima);
+        txtHora = findViewById(R.id.txtHora);
+        txtNumero = findViewById(R.id.txtNumero);
         btnGuardarV= findViewById(R.id.btnGuardarV);
         btnAplicada = findViewById(R.id.btnAplicada);
         btnProximo = findViewById(R.id.btnProximo);
         btnLimpiar = findViewById(R.id.btnLimpiar);
+        btnHora = findViewById(R.id.btnHora);
+
+        Intent i = new Intent(this, llamadas.class);
 
         btnGuardarV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +63,17 @@ public class vacunas extends AppCompatActivity {
                 long id = dbVacuna.insertarVacuna(txtMicroChip.getText().toString(),txtVacuna.getText().toString(),txtDiluente.getText().toString(),txtAplicada.getText().toString(),txtProxima.getText().toString());
 
                 if (id > 0){
-                    Toast.makeText(vacunas.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
+                    String tag = generateKey();
+                    long AlertTime = calendar.getTimeInMillis() - System.currentTimeMillis();
+                    int random = (int)(Math.random() * 50 + 1);
+
+                    Data data = GuardarData("Recordatorio de la Vacuna: "+ txtVacuna.getText(), "Llamar al numero: " + txtNumero.getText(),random);
+                    Workmanagernoti2.GuardarNoti2(AlertTime,data,tag);
+
+                    Toast.makeText(vacunas.this,"Registro Guardado", Toast.LENGTH_SHORT).show();
+
+                    i.putExtra("dato", txtNumero.getText().toString());
+                    startActivity(i);
                     limpiar();
                 } else {
                     Toast.makeText(vacunas.this, "ERROR AL GUARDAR EL REGISTRO", Toast.LENGTH_LONG).show();
@@ -110,6 +133,45 @@ public class vacunas extends AppCompatActivity {
                 limpiar();
             }
         });
+
+        btnHora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hora = actual.get(Calendar.HOUR_OF_DAY);
+                minutos = actual.get(Calendar.MINUTE);
+
+                TimePickerDialog timePickerDialog = new TimePickerDialog(v.getContext(), new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int h, int m) {
+                        calendar.set(calendar.HOUR_OF_DAY,h);
+                        calendar.set(calendar.MINUTE,m);
+
+                        txtHora.setText(String.format("%02d:%02d", h, m));
+
+                    }
+                }, hora,minutos,true);
+                timePickerDialog.show();
+            }
+        });
+
+    }
+
+
+    private void setPedingIntent(Class<?> clsActivity){
+        Intent intent = new Intent(this, clsActivity);
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+        stackBuilder.addParentStack(clsActivity);
+        stackBuilder.addNextIntent(intent);
+        pendingIntent = stackBuilder.getPendingIntent(1, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    private String generateKey(){
+        return UUID.randomUUID().toString();
+    }
+
+    private Data GuardarData(String titulo, String detalle, int id_noti){
+        return new Data.Builder().putString("titulo",titulo).putString("detalle",detalle)
+                .putInt("id_noti",id_noti).build();
     }
 
     private void limpiar(){
@@ -118,6 +180,8 @@ public class vacunas extends AppCompatActivity {
         txtDiluente.setText("");
         txtAplicada.setText("");
         txtProxima.setText("");
+        txtNumero.setText("");
+        txtHora.setText("");
     }
 
     //Metodo para el boton anterior
