@@ -29,7 +29,7 @@ public class agregar_datos extends AppCompatActivity {
     Calendar actual = Calendar.getInstance();
     Calendar calendar = Calendar.getInstance();
 
-    private int minutos, hora, dia, mes, anio;
+    private int minutos, hora, dia, mes, anio, prueba;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
