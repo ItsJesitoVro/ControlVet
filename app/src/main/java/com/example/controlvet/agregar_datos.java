@@ -121,6 +121,8 @@ public class agregar_datos extends AppCompatActivity {
         txtextras2.setText("");
     }
 
+
+
     //Metodo para el boton anterior
     public void Regresar(View view){
         Intent regresar = new Intent(this, MainActivity.class);

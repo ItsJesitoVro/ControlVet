@@ -99,4 +99,21 @@ public class DbMascotas extends DbHelper {
         return contactos;
     }
 
+    public boolean eliminar(String microchip){
+        boolean correcto = false;
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase bd = dbHelper.getWritableDatabase();
+
+        try {
+            bd.execSQL("DELETE FROM " + TABLE_MASCOTAS + " WHERE  microchip = '"+microchip+"' LIMIT 1");
+            correcto = true;
+        }catch (Exception ex){
+            ex.toString();
+            correcto = false;
+        }finally {
+            bd.close();
+        }
+        return correcto;
+    }
+
 }
