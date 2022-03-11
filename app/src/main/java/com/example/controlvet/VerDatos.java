@@ -16,7 +16,7 @@ import com.example.controlvet.entidades.Contactos;
 
 import java.util.ArrayList;
 
-public class VerDatos extends AppCompatActivity {
+public class  VerDatos extends AppCompatActivity {
 
     RecyclerView listaContactos, listaDueño;
     ArrayList<Contactos> listaArrayContanctos, ListaArrayDueño;

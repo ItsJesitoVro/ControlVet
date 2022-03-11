@@ -12,66 +12,97 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+
         <ImageButton
             android:id="@+id/imageButton2"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
+            android:backgroundTint="#79FF0000"
             android:onClick="Regresar"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
             app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_revert"
-            tools:ignore="SpeakableTextPresentCheck"
-            style="?attr/materialButtonOutlinedStyle"
-            android:backgroundTint="#79FF0000"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp"
-            app:strokeColor="@color/black"/>
+            app:strokeColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
         <ImageButton
             android:id="@+id/btnLimpiar"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="10dp"
+            android:backgroundTint="#79FF0000"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toStartOf="@+id/btnGuardarV"
             app:layout_constraintStart_toEndOf="@+id/imageButton2"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@android:drawable/ic_popup_sync"
-            tools:ignore="SpeakableTextPresentCheck"
-            style="?attr/materialButtonOutlinedStyle"
-            android:backgroundTint="#79FF0000"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp"
-            app:strokeColor="@color/black"/>
+            app:strokeColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/btnGuardarV"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="10dp"
+            android:backgroundTint="#79FF0000"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnLimpiar"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@android:drawable/ic_menu_save"
-            tools:ignore="SpeakableTextPresentCheck"
+            app:strokeColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnEliminar1"
             style="?attr/materialButtonOutlinedStyle"
-            android:backgroundTint="#79FF0000"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="0"
+            android:backgroundTint="@color/white"
+            android:onClick="Regresar"
             android:textColor="@color/white"
             app:cornerRadius="20dp"
-            app:strokeColor="@color/black"/>
-
+            app:icon="@android:drawable/ic_menu_delete"
+            app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            app:strokeColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <ScrollView
@@ -137,7 +168,7 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="37dp"
                 android:ems="10"
-                android:hint="Raza"
+                android:hint="Ingrese la Raza"
                 android:inputType="textPersonName"
                 app:layout_constraintBottom_toTopOf="@+id/btnAplicada"
                 app:layout_constraintEnd_toEndOf="parent"

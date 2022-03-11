@@ -41,7 +41,7 @@ public class notificaciones extends AppCompatActivity {
 
         btnFecha = findViewById(R.id.btnFecha);
         btnHora = findViewById(R.id.btnHora);
-        btnEliminar = findViewById(R.id.btnEliminar);
+        btnEliminar = findViewById(R.id.btnEliminar1);
         btnGuardarN = findViewById(R.id.btnGuardarN);
         txtFecha = findViewById(R.id.txtFecha);
         txtHora = findViewById(R.id.txtHora);
