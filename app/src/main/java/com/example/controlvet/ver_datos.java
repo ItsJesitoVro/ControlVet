@@ -21,4 +21,9 @@ public class ver_datos extends AppCompatActivity {
         Intent regresar = new Intent(this, MainActivity.class);
         startActivity(regresar);
     }
+
+    public void Eliminar(View view){
+        Intent eliminar = new Intent(this, MainActivity.class);
+        startActivity(eliminar);
+    }
 }
