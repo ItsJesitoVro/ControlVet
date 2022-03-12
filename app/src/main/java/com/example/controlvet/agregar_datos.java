@@ -58,6 +58,7 @@ public class agregar_datos extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(validar()){
                 DbMascotas dbMascotas = new DbMascotas(agregar_datos.this);
                 long id = dbMascotas.insertarMascotas(txtmicrochip.getText().toString(), txtnommascota.getText().toString(), txtraza.getText().toString(), txtnacimiento.getText().toString(), txtcolor.getText().toString(), txttipomascota.getText().toString(), txtsexo.getText().toString(), txtextras.getText().toString());
 
@@ -71,6 +72,7 @@ public class agregar_datos extends AppCompatActivity {
                     Toast.makeText(agregar_datos.this, "ERROR AL GUARDAR EL REGISTRO", Toast.LENGTH_LONG).show();
                 }
 
+            }
             }
         });
         btnLimpiar.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +104,93 @@ public class agregar_datos extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
+    }
+
+    public boolean validar()
+    {
+        boolean retorno = true;
+        /**Datos de la mascota*/
+        String nombreMascota=txtnommascota.getText().toString();
+        String raza=txtraza.getText().toString();
+        String nacimiento=txtnacimiento.getText().toString();
+        String color=txtcolor.getText().toString();
+        String tipo=txttipomascota.getText().toString();
+        String sexo=txtsexo.getText().toString();
+        String microchip=txtmicrochip.getText().toString();
+        String datosA=txtextras.getText().toString();
+        /**Datos del dueño*/
+        String nombreDueño=txtnompro.getText().toString();
+        String celular=txtcelular.getText().toString();
+        String direccion=txtdireccion.getText().toString();
+        String correo=txtcorreo.getText().toString();
+        String datosA2=txtextras2.getText().toString();
+        /**Validaciones de cada campo*/
+        if(nombreMascota.isEmpty())
+        {
+            txtnommascota.setError("Ingrese el nombre de la mascota");
+            retorno=false;
+        }
+        if(raza.isEmpty())
+        {
+            txtraza.setError("Ingrese la raza de la mascota");
+            retorno=false;
+        }
+        if(nacimiento.isEmpty())
+        {
+            txtnacimiento.setError("Ingrese la fecha de nacimiento");
+            retorno=false;
+        }
+        if(color.isEmpty())
+        {
+            txtcolor.setError("Ingrese el color de la mascota");
+            retorno=false;
+        }
+        if(tipo.isEmpty())
+        {
+            txttipomascota.setError("Ingrese el tipo de mascota");
+            retorno=false;
+        }
+        if(sexo.isEmpty())
+        {
+            txtsexo.setError("Ingrese el genero de la mascota");
+            retorno=false;
+        }
+        if(microchip.isEmpty())
+        {
+            txtmicrochip.setError("Ingrese el microchip de la mascota");
+            retorno=false;
+        }
+        if(datosA.isEmpty())
+        {
+            txtextras.setError("Ingrese un dato adicional");
+            retorno=false;
+        }
+        if(nombreDueño.isEmpty())
+        {
+            txtnompro.setError("Ingrese su nombre");
+            retorno=false;
+        }
+        if(celular.isEmpty())
+        {
+            txtcelular.setError("Ingrese su telefono");
+            retorno=false;
+        }
+        if(direccion.isEmpty())
+        {
+            txtdireccion.setError("Ingrese su dirección");
+            retorno=false;
+        }
+        if(correo.isEmpty())
+        {
+            txtcorreo.setError("Ingrese su correo electrónico");
+            retorno=false;
+        }
+        if(datosA2.isEmpty())
+        {
+            txtextras2.setError("Ingrese su nombre");
+            retorno=false;
+        }
+        return retorno;
     }
 
     private void limpiar(){
