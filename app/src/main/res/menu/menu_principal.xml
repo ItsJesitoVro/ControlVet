@@ -7,6 +7,10 @@
         android:title="Nuevo Registro" />
 
     <item
+        android:id="@+id/menuBuscar"
+        android:title="Buscar Mascotas" />
+
+    <item
         android:id="@+id/menuVer"
         android:title="Ver Registros" />
 

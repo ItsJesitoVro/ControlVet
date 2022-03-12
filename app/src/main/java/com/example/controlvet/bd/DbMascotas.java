@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
+import com.example.controlvet.adaptadores.ListaMascotasAdapter;
 import com.example.controlvet.entidades.Contactos;
 
 import java.util.ArrayList;
@@ -74,6 +75,7 @@ public class DbMascotas extends DbHelper {
         return listaContactos;
     }
 
+
     public Contactos verContactos(int identificador){
         DbHelper dbHelper = new DbHelper(context);
         SQLiteDatabase bd = dbHelper.getWritableDatabase();
@@ -97,6 +99,22 @@ public class DbMascotas extends DbHelper {
         cursorContactos.close();
 
         return contactos;
+    }
+
+    public void buscarMascotas(Contactos contactos, String microchip){
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase bd = dbHelper.getWritableDatabase();
+
+        Cursor cursorContactos;
+
+        cursorContactos = bd.rawQuery("SELECT * FROM TABLE_MASCOTAS WHERE microchip ='"+microchip+"'" , null);
+
+        if (cursorContactos.moveToFirst()){
+            do {
+                contactos.setMicrochip(cursorContactos.getString(1));
+                contactos.setNombreM(cursorContactos.getString(2));
+            } while (cursorContactos.moveToNext());
+        }
     }
 
     public boolean eliminar(String microchip){

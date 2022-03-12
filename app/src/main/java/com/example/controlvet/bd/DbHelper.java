@@ -1,10 +1,15 @@
 package com.example.controlvet.bd;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import com.example.controlvet.entidades.Contactos;
+
+import java.util.ArrayList;
 
 public class DbHelper extends SQLiteOpenHelper {
 
@@ -70,5 +75,4 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
 
     }
-
 }

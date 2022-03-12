@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.controlvet.bd.DbMascotas;
@@ -37,7 +35,7 @@ public class agregar_datos extends AppCompatActivity {
         setContentView(R.layout.activity_agregar_datos);
 
         txtmicrochip = findViewById(R.id.txtmicrochip);
-        txtnommascota = findViewById(R.id.txtnommascota);
+        txtnommascota = findViewById(R.id.txtNombremascotaB);
         txtraza = findViewById(R.id.txtraza);
         txtnacimiento = findViewById(R.id.txtnacimiento);
         txtcolor = findViewById(R.id.txtcolor);

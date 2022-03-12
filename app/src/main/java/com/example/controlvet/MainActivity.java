@@ -94,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menuNuevo:
                 nuevoregistro();
                 return true;
+            case R.id.menuBuscar:
+                registroBuscar();
+                return true;
             case R.id.menuVer:
                 verRegistro();
                 return true;
@@ -113,6 +116,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void nuevoregistro(){
         Intent intent = new Intent(this, agregar_datos.class);
+        startActivity(intent);
+    }
+
+    private void registroBuscar(){
+        Intent intent = new Intent(this, ver_datos.class);
         startActivity(intent);
     }
 
@@ -141,6 +149,12 @@ public class MainActivity extends AppCompatActivity {
         Intent siguiente1 = new Intent(this, agregar_datos.class);
         startActivity(siguiente1);
     }
+
+    public void SiguienteBuscar(View view){
+        Intent siguienteB = new Intent(this, ver_datos.class);
+        startActivity(siguienteB);
+    }
+
     public void Siguiente2(View view){
         Intent siguiente2 = new Intent(this, VerDatos.class);
         startActivity(siguiente2);

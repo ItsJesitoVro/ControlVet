@@ -78,7 +78,7 @@
              android:layout_height="wrap_content"
              android:orientation="horizontal">
         <EditText
-            android:id="@+id/microchip"
+            android:id="@+id/txtMicrochipB"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:hint="Microchip"
@@ -93,25 +93,28 @@
 
         </EditText>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Buscar"
-                style="?attr/materialButtonOutlinedStyle"
-                android:backgroundTint="#79FF6600"
-                android:textColor="@color/white"
-                app:cornerRadius="20dp"
-                app:strokeColor="@color/black">
+             <Button
+                 android:id="@+id/btnBuscar"
+                 style="?attr/materialButtonOutlinedStyle"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:backgroundTint="#79FF6600"
+                 android:text="Buscar"
+                 android:textColor="@color/white"
+                 app:cornerRadius="20dp"
+                 app:strokeColor="@color/black">
 
-            </Button></LinearLayout>
+             </Button></LinearLayout>
+
             <EditText
-                android:id="@+id/txtnommascota"
+                android:id="@+id/txtNombremascotaB"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="1dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="30dp"
                 android:ems="10"
+                android:enabled="false"
                 android:hint="Nombre de la Mascota"
                 android:inputType="textPersonName"
                 app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
@@ -120,19 +123,20 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
-                android:id="@+id/raza"
+                android:id="@+id/txtRaza"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="37dp"
                 android:ems="10"
+                android:enabled="false"
                 android:hint="Ingrese la Raza"
                 android:inputType="textPersonName"
                 app:layout_constraintBottom_toTopOf="@+id/btnAplicada"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtnommascota" />
+                app:layout_constraintTop_toBottomOf="@+id/txtNombremascotaB" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -146,6 +150,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="11dp"
                     android:ems="10"
+                    android:enabled="false"
                     android:hint="DD/MM/AAAA"
                     android:inputType="date"
                     android:minHeight="48dp"
@@ -168,145 +173,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/txtcolor"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Color"
-                android:inputType="textPersonName"
-                app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnAplicada" />
 
-                <EditText
-            android:id="@+id/txttipomascota"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
-            android:hint="Tipo de mascota (felino, canino, entre otros)"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAplicada"></EditText>
-
-            <EditText
-                android:id="@+id/txtsexo"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Sexo (Macho, Hembra)"
-                android:inputType="textPersonName"
-                app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnAplicada"></EditText>
-
-            <EditText
-                android:id="@+id/extra"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:hint="Señas Particulares">
-
-            </EditText>
-
-            <TextView
-                android:id="@+id/titulo2"
-                android:layout_width="355dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="8dp"
-                android:rotation="0"
-                android:rotationY="0"
-                android:text="@string/titulo2"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold|italic">
-
-            </TextView>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Nombre del Propietario"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
-            </EditText>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Numero de celular"
-                android:inputType="textPersonName|phone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
-            </EditText>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Dirección"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
-            </EditText>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Correo Electronico"
-                android:inputType="textEmailAddress"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
-            </EditText>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Datos Adicionales"
-                android:inputType="text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
-            </EditText>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

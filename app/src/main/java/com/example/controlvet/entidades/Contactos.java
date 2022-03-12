@@ -26,6 +26,9 @@ public class Contactos {
 
     private String numero;
 
+    private String microchip_B;
+    private String raza_B;
+
 
     public int getIdentificador() {
         return identificador;
@@ -39,9 +42,16 @@ public class Contactos {
         return microchip;
     }
 
-
     public void setMicrochip(String microchip) {
         this.microchip = microchip;
+    }
+
+    public String getMicrochip_Buscar() {
+        return microchip_B;
+    }
+
+    public void setMicrochip_Buscar(String microchip_B) {
+        this.microchip_B = microchip_B;
     }
 
     public String getNombre() {
@@ -74,6 +84,12 @@ public class Contactos {
 
     public void setRaza(String raza) {
         this.raza = raza;
+    }
+
+    public String getRaza_Buscar() { return raza_B;}
+
+    public void setRaza_Buscar(String raza_B) {
+        this.raza_B = raza_B;
     }
 
     public String getNacimiento() {
