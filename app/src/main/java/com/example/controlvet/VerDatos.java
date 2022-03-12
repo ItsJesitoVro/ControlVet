@@ -48,4 +48,8 @@ public class  VerDatos extends AppCompatActivity {
         Intent regresar = new Intent(this, MainActivity.class);
         startActivity(regresar);
     }
+    public void Eliminar(View view){
+        Intent eliminar = new Intent(this, ver_datos.class);
+        startActivity(eliminar);
+    }
 }

@@ -34,56 +34,6 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/btnLimpiar"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#79FF0000"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toStartOf="@+id/btnGuardarV"
-            app:layout_constraintStart_toEndOf="@+id/imageButton2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@android:drawable/ic_popup_sync"
-            app:strokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/btnGuardarV"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#79FF0000"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnLimpiar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@android:drawable/ic_menu_save"
-            app:strokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal" >
-
-        <ImageButton
             android:id="@+id/btnEliminar1"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="80dp"
@@ -103,6 +53,15 @@
             app:srcCompat="@android:drawable/ic_menu_delete"
             app:strokeColor="@color/black"
             tools:ignore="SpeakableTextPresentCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
     <ScrollView

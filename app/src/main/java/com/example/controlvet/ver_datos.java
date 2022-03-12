@@ -22,7 +22,7 @@ public class ver_datos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_datos);
 
-        btnEliminar1 = findViewById(R.id.btnEliminar1);
+
 
         btnEliminar1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,10 +51,8 @@ public class ver_datos extends AppCompatActivity {
     }
 
     public void Eliminar(View view){
-        Intent eliminar = new Intent(this, MainActivity.class);
+        Intent eliminar = new Intent(this, ver_datos.class);
         startActivity(eliminar);
     }
-
-
 
 }
