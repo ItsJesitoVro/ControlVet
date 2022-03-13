@@ -31,15 +31,11 @@ public class llamadas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_llamadas);
-
         verificarPermisos();
-
         txtCelu = findViewById(R.id.txtCelu);
         btnLlamar = findViewById(R.id.btnLlamar);
-
         String dato = getIntent().getStringExtra("dato");
         txtCelu.setText("" + dato);
-
         btnLlamar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +57,6 @@ public class llamadas extends AppCompatActivity {
             requestPermissions(new String[]{Manifest.permission.CALL_PHONE},REQUEST_CODE);
         }
     }
-
     //Metodo para el boton anterior
     public void Regresar(View view){
         Intent regresar = new Intent(this, MainActivity.class);

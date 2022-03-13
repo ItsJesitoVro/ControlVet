@@ -33,7 +33,6 @@ public class Workmanagernoti2 extends Worker {
         WorkManager instance = WorkManager.getInstance();
         instance.enqueue(noti);
     }
-
     @NonNull
     @Override
     public Result doWork() {
@@ -58,12 +57,10 @@ public class Workmanagernoti2 extends Worker {
             assert nm != null;
             nm.createNotificationChannel(nc);
         }
-
         Intent intent = new Intent(getApplicationContext(), llamadas.class);
 
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),0, intent, PendingIntent.FLAG_ONE_SHOT);
-
         builder.setAutoCancel(true).setWhen(System.currentTimeMillis())
                 .setContentTitle(t)
                 .setTicker("Nueva Notificacion")
@@ -71,10 +68,8 @@ public class Workmanagernoti2 extends Worker {
                 .setContentText(d)
                 .setContentIntent(pendingIntent)
                 .setContentInfo("nuevo");
-
         Random random = new Random();
         int idNotifify = random.nextInt(8000);
-
         assert nm != null;
         nm.notify(idNotifify,builder.build());
     }

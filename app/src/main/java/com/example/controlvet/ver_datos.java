@@ -41,6 +41,7 @@ public class ver_datos extends AppCompatActivity {
                 DbMascotas dbMascotas = new DbMascotas(ver_datos.this);
                 dbMascotas.buscarMascotas(contactos, txtMicrochip.getText().toString());
                 txtNombremascota.setText(contactos.getNombreM());
+
             }
         });
     }
