@@ -100,23 +100,6 @@ public class DbMascotas extends DbHelper {
 
         return contactos;
     }
-
-    public void buscarMascotas(Contactos contactos, String microchip){
-        DbHelper dbHelper = new DbHelper(context);
-        SQLiteDatabase bd = dbHelper.getWritableDatabase();
-
-        Cursor cursorContactos;
-
-        cursorContactos = bd.rawQuery("SELECT * FROM TABLE_MASCOTAS WHERE microchip ='"+microchip+"'" , null);
-
-        if (cursorContactos.moveToFirst()){
-            do {
-                contactos.setMicrochip(cursorContactos.getString(1));
-                contactos.setNombreM(cursorContactos.getString(2));
-            } while (cursorContactos.moveToNext());
-        }
-    }
-
     public boolean eliminar(String microchip){
         boolean correcto = false;
         DbHelper dbHelper = new DbHelper(context);
@@ -132,6 +115,29 @@ public class DbMascotas extends DbHelper {
             bd.close();
         }
         return correcto;
+    }
+    public void buscarMascotas(Contactos contactos, String microchip){
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase bd = dbHelper.getWritableDatabase();
+
+        Cursor cursorContactos;
+
+        cursorContactos = bd.rawQuery("SELECT * FROM TABLE_MASCOTAS WHERE microchip ='"+microchip+"'" , null);
+
+        if (cursorContactos.moveToFirst()){
+            do {
+                contactos.setMicrochip(cursorContactos.getString(1));
+                contactos.setNombreM(cursorContactos.getString(2));
+            } while (cursorContactos.moveToNext());
+        }
+    }
+    public void eliminarr(String microchip){
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase bd = dbHelper.getWritableDatabase();
+        if (bd!=null){
+            bd.execSQL("DELETE FROM TABLE_MASCOTAS WHERE microchip='+microchip+'");
+                    bd.close();
+        }
     }
 
 }

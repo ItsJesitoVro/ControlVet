@@ -200,16 +200,12 @@ public class agregar_datos extends AppCompatActivity {
         txttipomascota.setText("");
         txtsexo.setText("");
         txtextras.setText("");
-
         txtnompro.setText("");
         txtcelular.setText("");
         txtdireccion.setText("");
         txtcorreo.setText("");
         txtextras2.setText("");
     }
-
-
-
     //Metodo para el boton anterior
     public void Regresar(View view){
         Intent regresar = new Intent(this, MainActivity.class);
