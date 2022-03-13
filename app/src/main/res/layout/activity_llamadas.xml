@@ -5,42 +5,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/fondollamada"
     tools:context=".llamadas">
 
-    <EditText
-        android:id="@+id/txtCelu"
-        android:layout_width="332dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="63dp"
-        android:ems="10"
-        android:hint="Numero de Celular"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/btnLlamar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/llamandooo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="325dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp"
+            android:rotation="0"
+            android:rotationY="0"
+            android:text="Atención al Cliente"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Numero Telefonico"
+        app:startIconDrawable="@drawable/ic_celular">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCelu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btnLlamar"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <ImageButton
         android:id="@+id/btnLlamar"
         android:layout_width="177dp"
         android:layout_height="88dp"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="147dp"
-        android:backgroundTint="#EC7D28"
+        android:backgroundTint="#358f80"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCelu"
-        app:srcCompat="@android:drawable/ic_menu_call"
+        app:srcCompat="@drawable/celularrr"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -50,9 +82,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="90dp"
         android:layout_marginEnd="50dp"
-        android:backgroundTint="#EC7D28"
+        android:backgroundTint="#fff"
         android:onClick="Regresar"
         app:cornerRadius="20dp"
-        app:srcCompat="@android:drawable/ic_menu_revert"
+        app:srcCompat="@drawable/returnnn"
         tools:ignore="SpeakableTextPresentCheck" />
 </LinearLayout>
