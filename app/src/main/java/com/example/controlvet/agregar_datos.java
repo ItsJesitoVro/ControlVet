@@ -115,13 +115,11 @@ public class agregar_datos extends AppCompatActivity {
         String tipo=txttipomascota.getText().toString();
         String sexo=txtsexo.getText().toString();
         String microchip=txtmicrochip.getText().toString();
-        String datosA=txtextras.getText().toString();
         /**Datos del dueño*/
         String nombreDueño=txtnompro.getText().toString();
         String celular=txtcelular.getText().toString();
         String direccion=txtdireccion.getText().toString();
         String correo=txtcorreo.getText().toString();
-        String datosA2=txtextras2.getText().toString();
         /**Validaciones de cada campo*/
         if(nombreMascota.isEmpty())
         {
@@ -158,11 +156,6 @@ public class agregar_datos extends AppCompatActivity {
             txtmicrochip.setError("Ingrese el microchip de la mascota");
             retorno=false;
         }
-        if(datosA.isEmpty())
-        {
-            txtextras.setError("Ingrese un dato adicional");
-            retorno=false;
-        }
         if(nombreDueño.isEmpty())
         {
             txtnompro.setError("Ingrese su nombre");
@@ -183,11 +176,7 @@ public class agregar_datos extends AppCompatActivity {
             txtcorreo.setError("Ingrese su correo electrónico");
             retorno=false;
         }
-        if(datosA2.isEmpty())
-        {
-            txtextras2.setError("Ingrese su nombre");
-            retorno=false;
-        }
+
         return retorno;
     }
 

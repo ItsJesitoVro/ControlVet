@@ -59,24 +59,26 @@ public class vacunas extends AppCompatActivity {
         btnGuardarV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DbVacuna dbVacuna = new DbVacuna(vacunas.this);
-                long id = dbVacuna.insertarVacuna(txtMicroChip.getText().toString(),txtVacuna.getText().toString(),txtDiluente.getText().toString(),txtAplicada.getText().toString(),txtProxima.getText().toString());
+                if (validar()) {
+                    DbVacuna dbVacuna = new DbVacuna(vacunas.this);
+                    long id = dbVacuna.insertarVacuna(txtMicroChip.getText().toString(), txtVacuna.getText().toString(), txtDiluente.getText().toString(), txtAplicada.getText().toString(), txtProxima.getText().toString());
 
-                if (id > 0){
-                    String tag = generateKey();
-                    long AlertTime = calendar.getTimeInMillis() - System.currentTimeMillis();
-                    int random = (int)(Math.random() * 50 + 1);
+                    if (id > 0) {
+                        String tag = generateKey();
+                        long AlertTime = calendar.getTimeInMillis() - System.currentTimeMillis();
+                        int random = (int) (Math.random() * 50 + 1);
 
-                    Data data = GuardarData("Recordatorio de la Vacuna: "+ txtVacuna.getText(), "Llamar al numero: " + txtNumero.getText(),random);
-                    Workmanagernoti2.GuardarNoti2(AlertTime,data,tag);
+                        Data data = GuardarData("Recordatorio de la Vacuna: " + txtVacuna.getText(), "Llamar al numero: " + txtNumero.getText(), random);
+                        Workmanagernoti2.GuardarNoti2(AlertTime, data, tag);
 
-                    Toast.makeText(vacunas.this,"Registro Guardado", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(vacunas.this, "Registro Guardado", Toast.LENGTH_SHORT).show();
 
-                    i.putExtra("dato", txtNumero.getText().toString());
-                    startActivity(i);
-                    limpiar();
-                } else {
-                    Toast.makeText(vacunas.this, "ERROR AL GUARDAR EL REGISTRO", Toast.LENGTH_LONG).show();
+                        i.putExtra("dato", txtNumero.getText().toString());
+                        startActivity(i);
+                        limpiar();
+                    } else {
+                        Toast.makeText(vacunas.this, "ERROR AL GUARDAR EL REGISTRO", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
@@ -173,6 +175,49 @@ public class vacunas extends AppCompatActivity {
         return new Data.Builder().putString("titulo",titulo).putString("detalle",detalle)
                 .putInt("id_noti",id_noti).build();
     }
+
+    public boolean validar()
+    {
+        boolean retorno = true;
+        String Microchip=txtMicroChip.getText().toString();
+        String VacunaAplicada=txtVacuna.getText().toString();
+        String Diluente=txtDiluente.getText().toString();
+        String Numero=txtNumero.getText().toString();
+        String Aplicacion=txtAplicada.getText().toString();
+        String Proxima=txtProxima.getText().toString();
+        if(Microchip.isEmpty())
+        {
+            txtMicroChip.setError("Ingrese el microchip");
+            retorno=false;
+        }
+        if(VacunaAplicada.isEmpty())
+        {
+            txtVacuna.setError("Ingrese el nombre de la vacuna");
+            retorno=false;
+        }
+        if(Diluente.isEmpty())
+        {
+            txtDiluente.setError("Ingrese el Diluente");
+            retorno=false;
+        }
+        if(Numero.isEmpty())
+        {
+            txtNumero.setError("Ingrese su numero de telefono");
+            retorno=false;
+        }
+        if(Aplicacion.isEmpty())
+        {
+            txtAplicada.setError("Ingrese la fecha de aplicación");
+            retorno=false;
+        }
+        if(Proxima.isEmpty())
+        {
+            txtProxima.setError("Ingrese la fecha proxima de aplicación");
+            retorno=false;
+        }
+        return retorno;
+    }
+
 
     private void limpiar(){
         txtMicroChip.setText("");
