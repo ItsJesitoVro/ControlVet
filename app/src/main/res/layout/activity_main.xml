@@ -146,7 +146,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="50dp"
                 android:backgroundTint="#0077b6"
-                android:onClick="Irweb"
+                android:onClick="SiguienteWeb"
                 android:text="@string/web"
                 android:textColor="@color/white"
                 app:cornerRadius="20dp"

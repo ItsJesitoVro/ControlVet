@@ -25,4 +25,8 @@
     <item
         android:id="@+id/menuAddNoti"
         android:title="Agregar notificación" />
+
+    <item
+        android:id="@+id/menuNavegador"
+        android:title="Entrar a la pagina web" />
 </menu>

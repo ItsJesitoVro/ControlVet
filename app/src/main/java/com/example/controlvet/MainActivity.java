@@ -109,6 +109,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menuAddNoti:
                 addNoti();
                 return true;
+            case R.id.menuNavegador:
+                irweb();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -150,9 +153,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siguiente1);
     }
 
-    public void SiguienteBuscar(View view){
-        Intent siguienteB = new Intent(this, ver_datos.class);
-        startActivity(siguienteB);
+    public void SiguienteWeb(View view){
+        Intent siguienteW = new Intent(this, webb.class);
+        startActivity(siguienteW);
     }
 
     public void Siguiente2(View view){
@@ -168,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siguiente4);
     }
 
-    public void Irweb(View view){
+    public void irweb(){
         Intent irweb = new Intent(this, webb.class);
         startActivity(irweb);
     }
