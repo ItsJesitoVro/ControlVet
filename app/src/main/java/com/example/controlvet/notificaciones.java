@@ -96,23 +96,25 @@ public class notificaciones extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String txtTitul = txtTitulo.getText().toString();
-                String txtDetall = txtDetalle.getText().toString();
-                String txtFech = txtFecha.getText().toString();
-                String txtHor = txtHora.getText().toString();
+                if (validar()) {
+                    String txtTitul = txtTitulo.getText().toString();
+                    String txtDetall = txtDetalle.getText().toString();
+                    String txtFech = txtFecha.getText().toString();
+                    String txtHor = txtHora.getText().toString();
 
-                if(txtTitul.length() == 0 || txtDetall.length() == 0 || txtFech.length() == 0 || txtHor.length() == 0){
-                    Toast.makeText(notificaciones.this,"Debes de acompletar todos los campos", Toast.LENGTH_LONG).show();
-                } if (txtTitul.length() != 0 && txtDetall.length() != 0 && txtFech.length() != 0 && txtHor.length() != 0){
-                String tag = generateKey();
-                long AlertTime = calendar.getTimeInMillis() - System.currentTimeMillis();
-                int random = (int)(Math.random() * 50 + 1);
+                    if(txtTitul.length() == 0 || txtDetall.length() == 0 || txtFech.length() == 0 || txtHor.length() == 0){
+                        Toast.makeText(notificaciones.this,"Debes de acompletar todos los campos", Toast.LENGTH_LONG).show();
+                 } if (txtTitul.length() != 0 && txtDetall.length() != 0 && txtFech.length() != 0 && txtHor.length() != 0){
+                    String tag = generateKey();
+                    long AlertTime = calendar.getTimeInMillis() - System.currentTimeMillis();
+                    int random = (int)(Math.random() * 50 + 1);
 
-                Data data = GuardarData(" " + txtTitulo.getText(), "" + txtDetalle.getText(),random);
-                Workmanagernoti.GuardarNoti(AlertTime,data,tag);
+                    Data data = GuardarData(" " + txtTitulo.getText(), "" + txtDetalle.getText(),random);
+                    Workmanagernoti.GuardarNoti(AlertTime,data,tag);
 
-                Toast.makeText(notificaciones.this,"Recordatorio Guardado", Toast.LENGTH_SHORT).show();
-                limpiar();
+                    Toast.makeText(notificaciones.this,"Recordatorio Guardado", Toast.LENGTH_SHORT).show();
+                    limpiar();
+                    }
                 }
             }
         });
@@ -151,6 +153,22 @@ public class notificaciones extends AppCompatActivity {
         txtDetalle.setText("");
         txtHora.setText("");
         txtFecha.setText("");
+    }
+
+    public boolean validar()
+    {
+        boolean retorno = true;
+        String Titulo = txtTitulo.getText().toString();
+        String Detalle = txtDetalle.getText().toString();
+        if(Titulo.isEmpty()){
+            txtTitulo.setError("Ingrese Titulo");
+            retorno=false;
+        }
+        if(Detalle.isEmpty()){
+            txtDetalle.setError("Ingrese los detalles");
+            retorno=false;
+        }
+        return retorno;
     }
 
     private void performNotify(View view){
