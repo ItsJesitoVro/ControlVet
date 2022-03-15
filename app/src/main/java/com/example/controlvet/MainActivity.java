@@ -168,6 +168,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siguiente4);
     }
 
+    public void Irweb(View view){
+        Intent irweb = new Intent(this, webb.class);
+        startActivity(irweb);
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void verificarPermisos(){
         int PermisosAlmacenamiento = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
