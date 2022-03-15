@@ -4,43 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00FFFFFF">
+        android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/logo"
-            android:layout_width="186dp"
-            android:layout_height="152dp"
-            android:layout_marginStart="105dp"
-            android:layout_marginTop="29dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="50dp"
-            android:background="@drawable/circuloicono"
-            android:contentDescription="@string/todo"
+            android:id="@+id/imageView7"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/robot" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="315dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp"
             android:rotation="0"
             android:rotationY="0"
-            android:visibility="visible"
+            android:text="BIENVENIDO, QUE TENGAS UN EXCELENTE DÍA"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
-    <Button
-        android:id="@+id/btnCrear"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:text="@string/base_de_datos"
-        style="?attr/materialButtonOutlinedStyle"
-        android:backgroundTint="#79FF0000"
-        android:textColor="@color/white"
-        app:cornerRadius="20dp"
-        app:strokeColor="@color/black"
-        ></Button>
     </LinearLayout>
 
     <ScrollView
@@ -55,81 +50,109 @@
             <Button
                 android:id="@+id/button"
                 style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="166dp"
+                android:layout_width="360dp"
                 android:layout_height="83dp"
-                android:layout_marginStart="122dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="50dp"
-                android:layout_marginBottom="50dp"
-                android:backgroundTint="#79FF0000"
+                android:backgroundTint="#0077b6"
                 android:onClick="Siguiente1"
                 android:text="@string/agregar"
                 android:textColor="@color/white"
                 app:cornerRadius="20dp"
+                app:icon="@drawable/agregararchivo"
+                app:iconSize="50dp"
+                app:iconTint="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/button2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.463"
-                app:strokeColor="@color/black" />
+                app:strokeColor="#0077b6" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="166dp"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="360dp"
                 android:layout_height="83dp"
-                android:layout_marginStart="122dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="50dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#0077b6"
                 android:onClick="Siguiente2"
                 android:text="@string/ver"
+                android:textColor="#fff "
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ojo"
+                app:iconSize="50dp"
+                app:iconTint="#fff"
                 app:layout_constraintBottom_toTopOf="@+id/button3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                style="?attr/materialButtonOutlinedStyle"
-                android:backgroundTint="#79FF0000"
-                android:textColor="@color/white"
-                app:cornerRadius="20dp"
-                app:strokeColor="@color/black"/>
+                app:strokeColor="#0077b6" />
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="166dp"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="360dp"
                 android:layout_height="83dp"
-                android:layout_marginStart="122dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="50dp"
+                android:backgroundTint="#0077b6"
                 android:onClick="Siguiente3"
                 android:text="@string/notific"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/notificaciones"
+                app:iconSize="50dp"
+                app:iconTint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button2"
-                style="?attr/materialButtonOutlinedStyle"
-                android:backgroundTint="#79FF0000"
-                android:textColor="@color/white"
-                app:cornerRadius="20dp"
-                app:strokeColor="@color/black"/>
+                app:strokeColor="#0077b6" />
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="166dp"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="360dp"
                 android:layout_height="83dp"
-                android:layout_marginStart="122dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="50dp"
+                android:backgroundTint="#0077b6"
                 android:onClick="Siguiente4"
                 android:text="@string/vacunas"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/syringe"
+                app:iconSize="50dp"
+                app:iconTint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button3"
+                app:strokeColor="#0077b6" />
+
+            <Button
+                android:id="@+id/btnCrear"
                 style="?attr/materialButtonOutlinedStyle"
-                android:backgroundTint="#79FF0000"
+                android:layout_width="360dp"
+                android:layout_height="83dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:backgroundTint="#358f80"
+                android:text="@string/base_de_datos"
                 android:textColor="@color/white"
                 app:cornerRadius="20dp"
-                app:strokeColor="@color/black"/>
+                app:icon="@drawable/datastorage"
+                app:iconSize="50dp"
+                app:iconTint="@color/white"
+                app:strokeColor="#358f80"></Button>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
