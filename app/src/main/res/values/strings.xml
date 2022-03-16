@@ -6,6 +6,7 @@
     <string name="titulo1">FORMULARIO PARA AGREGAR MASCOTAS</string>
     <string name="titulo2">Datos del propietario</string>
     <string name="vacunas">Agregar Vacunas</string>
+    <string name="web">Ir a la web</string>
     <string name="todo">TODO</string>
     <string name="base_de_datos">Base de datos</string>
     <string name="Eliminar_Datos">Eliminar Datos</string>
