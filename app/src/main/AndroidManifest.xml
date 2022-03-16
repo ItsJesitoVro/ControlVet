@@ -41,8 +41,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".agregar_datos"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
