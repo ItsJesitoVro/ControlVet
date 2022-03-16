@@ -23,7 +23,7 @@
             android:backgroundTint="#79FF0000"
             android:onClick="Regresar"
             app:cornerRadius="20dp"
-            app:srcCompat="@android:drawable/ic_menu_revert"
+            app:srcCompat="@drawable/returnnn"
             app:strokeColor="@color/black"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -44,7 +44,7 @@
             app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_delete"
+            app:srcCompat="@drawable/deleteee"
             app:strokeColor="@color/black"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
@@ -59,30 +59,75 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Datos mascotas"
-        android:textSize="40dp"
-        android:textColor="@color/cardview_dark_background"></TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="165dp"
+                    android:layout_height="92dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/datosmascota" />
+
+                <TextView
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:text="INFORMACIÓN PERSONAL DE LA MASCOTA"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="20dp"></TextView>
+
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listapersona"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-             />
+                android:paddingStart="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#17c3b2"
+                android:scrollbarSize="@dimen/cardview_compat_inset_shadow">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Datos Propietarios"
-        android:textSize="40dp"
-        android:textColor="@color/cardview_dark_background"></TextView>
+            </androidx.recyclerview.widget.RecyclerView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listadueño"
-        android:layout_width="match_parent"
-        android:layout_height="300dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="95dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="165dp"
+                    android:layout_height="92dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/dueno" />
+
+                <TextView
+                    android:layout_width="276dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="INFORMACIÓN PERSONAL DEL PRPIETARIO"
+                    android:textAlignment="center"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="20dp"></TextView>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listadueño"
+                android:layout_width="match_parent"
+                android:paddingStart="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#17c3b2"
+                android:scrollbarSize="@dimen/cardview_compat_inset_shadow">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

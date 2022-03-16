@@ -3,12 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -17,102 +15,115 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Nombre: "
-                android:textSize="30dp"></TextView>
+                android:textColor="#1565c0"
+                android:textStyle="bold"
+                android:textSize="16dp"></TextView>
             <TextView
                 android:id="@+id/viewNombreP"
-                android:layout_width="match_parent"
+                android:layout_width="310dp"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
-                android:textSize="30dp"
-                android:hint="Nombre Persona"/>
+                android:layout_marginTop="10dp"
+                android:hint="Nombre Persona"
+                android:textColor="#000"
+                android:textSize="16dp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
-                android:text="Numero de Celular: "
-                android:textSize="15dp"></TextView>
-
+                android:text="Telefono: "
+                android:textColor="#1565c0"
+                android:textSize="16dp"></TextView>
             <TextView
                 android:id="@+id/viewCelular"
-                android:layout_width="match_parent"
+                android:layout_width="305dp"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Numero de celular"/>
-
+                android:layout_marginTop="10dp"
+                android:hint="Numero de celular"
+                android:textColor="#000"
+                android:textSize="16dp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
-                android:text="Direccion: "
-                android:textSize="15dp"></TextView>
-
+                android:textStyle="bold"
+                android:text="Dirección: "
+                android:textColor="#1565c0"
+                android:textSize="16dp"></TextView>
             <TextView
                 android:id="@+id/viewDireccion"
-                android:layout_width="match_parent"
+                android:layout_width="296dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Direccion"/>
-
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:hint="Direccion"
+                android:textColor="#000"
+                android:textSize="16dp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="73dp"
                 android:layout_height="wrap_content"
-                android:text="Correo: "
-                android:textSize="15dp"></TextView>
-
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Correo:"
+                android:textColor="#1565c0"
+                android:textSize="16dp"></TextView>
             <TextView
                 android:id="@+id/viewCorreo"
-                android:layout_width="match_parent"
+                android:layout_width="293dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Correo"/>
-
+                android:layout_marginTop="12dp"
+                android:hint="Correo"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="16dp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
-                android:text="Datos adicionales: "
-                android:textSize="15dp"></TextView>
-
+                android:text="Adicional:"
+                android:textStyle="bold"
+                android:textColor="#1565c0"
+                android:textSize="16dp"></TextView>
             <TextView
                 android:id="@+id/viewExtra2"
-                android:layout_width="match_parent"
+                android:layout_width="298dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Datos Extras"/>
-
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:hint="Datos Extras"
+                android:textColor="#000"
+                android:textSize="16dp" />
         </LinearLayout>
-
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="------------------------------------------------------------------------------------------------------------"></TextView>
-
-
+            android:layout_marginTop="4dp"
+            android:layout_height="2dp"
+            android:background="#000"
+            android:backgroundTint="#6c757d"/>
     </LinearLayout>
-
 </LinearLayout>

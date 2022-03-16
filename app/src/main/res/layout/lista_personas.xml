@@ -17,14 +17,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Nombre: "
-                android:textSize="30dp"></TextView>
+                android:textColor="#1565c0"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
+
             <TextView
                 android:id="@+id/viewNombreM"
-                android:layout_width="match_parent"
+                android:layout_width="338dp"
                 android:layout_height="wrap_content"
-                android:textSize="30dp"
-                android:hint="Nombre mascota"/>
+                android:layout_marginTop="10dp"
+                android:hint="Nombre de la Mascota"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -35,35 +42,47 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="MicroChip: "
-                android:textSize="15dp"></TextView>
+                android:textColor="#1565c0"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/viewChip"
-                android:layout_width="match_parent"
+                android:layout_width="316dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Microchip"/>
-
+                android:layout_marginTop="10dp"
+                android:hint="Numero de serie del chip"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:textStyle="bold">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Raza: "
-                android:textSize="15dp"></TextView>
+                android:textColor="#1565c0"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/viewRaza"
-                android:layout_width="match_parent"
+                android:layout_width="316dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Raza"/>
+                android:layout_marginTop="10dp"
+                android:hint="Nombre de la raza del animal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp" />
 
         </LinearLayout>
 
@@ -73,18 +92,23 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="168dp"
                 android:layout_height="wrap_content"
-                android:text="Fecha de Nacimiento: "
-                android:textSize="15dp"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="Fecha de Nacimiento:"
+                android:textColor="#1565c0"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/viewNacimiento"
-                android:layout_width="match_parent"
+                android:layout_width="293dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Nacimiento"/>
-
+                android:layout_marginTop="10dp"
+                android:hint="Nacimiento"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -95,16 +119,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Color: "
-                android:textSize="15dp"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="Color:"
+                android:textColor="#1565c0"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/viewColor"
-                android:layout_width="match_parent"
+                android:layout_width="361dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Color"/>
-
+                android:layout_marginTop="10dp"
+                android:hint="Color de la mascota"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -115,16 +144,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tipo de Mascota: "
-                android:textSize="15dp"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="Tipo de Mascota:"
+                android:textColor="#1565c0"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/viewTipo"
-                android:layout_width="match_parent"
+                android:layout_width="276dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Tipo de mascota"/>
-
+                android:layout_marginTop="10dp"
+                android:hint="Tipo de Mascota"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -135,16 +169,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sexo: "
-                android:textSize="15dp"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="Sexo del Animal:"
+                android:textColor="#1565c0"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/viewSexo"
-                android:layout_width="match_parent"
+                android:layout_width="282dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Sexo"/>
-
+                android:layout_marginTop="10dp"
+                android:hint="Sexo"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -155,22 +194,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Datos adicionales: "
-                android:textSize="15dp"></TextView>
+                android:layout_marginTop="10dp"
+                android:text="Datos Adicionales:"
+                android:textColor="#1565c0"
+                android:textSize="16dp"
+                android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/viewExtra"
-                android:layout_width="match_parent"
+                android:layout_width="271dp"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:hint="Datos Extras"/>
-
+                android:layout_marginTop="10dp"
+                android:hint="Extra"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="------------------------------------------------------------------------------------------------------------"></TextView>
+            android:layout_height="2dp"
+            android:layout_marginTop="4dp"
+            android:background="#000"
+            android:backgroundTint="#6c757d" />
 
     </LinearLayout>
 </LinearLayout>
