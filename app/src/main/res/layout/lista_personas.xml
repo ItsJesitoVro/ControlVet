@@ -80,9 +80,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:hint="Nombre de la raza del animal"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="16dp" />
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

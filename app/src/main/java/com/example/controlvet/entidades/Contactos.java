@@ -27,7 +27,6 @@ public class Contactos {
     private String numero;
 
     private String microchip_B;
-    private String raza_B;
 
 
     public int getIdentificador() {
@@ -84,12 +83,6 @@ public class Contactos {
 
     public void setRaza(String raza) {
         this.raza = raza;
-    }
-
-    public String getRaza_Buscar() { return raza_B;}
-
-    public void setRaza_Buscar(String raza_B) {
-        this.raza_B = raza_B;
     }
 
     public String getNacimiento() {

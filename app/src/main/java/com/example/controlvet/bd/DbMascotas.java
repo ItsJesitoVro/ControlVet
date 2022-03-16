@@ -62,6 +62,7 @@ public class DbMascotas extends DbHelper {
                 contactos = new Contactos();
                 contactos.setMicrochip(cursorContactos.getString(1));
                 contactos.setNombreM(cursorContactos.getString(2));
+                contactos.setRaza(cursorContactos.getString(3));
                 contactos.setNacimiento(cursorContactos.getString(4));
                 contactos.setColor(cursorContactos.getString(5));
                 contactos.setTipo_mascota(cursorContactos.getString(6));
