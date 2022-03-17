@@ -159,6 +159,27 @@
                 app:strokeColor="#0077b6" />
 
             <Button
+                android:id="@+id/button6"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#0077b6"
+                android:onClick="Irmap"
+                android:text="@string/map"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ubi"
+                app:iconSize="50dp"
+                app:iconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button3"
+                app:strokeColor="#0077b6" />
+
+            <Button
                 android:id="@+id/btnCrear"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"

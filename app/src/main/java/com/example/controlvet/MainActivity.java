@@ -176,6 +176,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(irweb);
     }
 
+    public void Irmap(View view){
+        Intent irmap = new Intent(this, MapsActivity02.class);
+        startActivity(irmap);
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void verificarPermisos(){
         int PermisosAlmacenamiento = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
