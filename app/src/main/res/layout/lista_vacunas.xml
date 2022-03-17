@@ -117,47 +117,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Sexo del Animal:"
-            android:textColor="#1565c0"
-            android:textSize="16dp"
-            android:textStyle="bold"></TextView>
-        <TextView
-            android:id="@+id/viewSexo"
-            android:layout_width="282dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Sexo"
-            android:textColor="#000"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        android:orientation="horizontal"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Datos Adicionales:"
-            android:textColor="#1565c0"
-            android:textSize="16dp"
-            android:textStyle="bold"></TextView>
-        <TextView
-            android:id="@+id/viewExtra"
-            android:layout_width="271dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Extra"
-            android:textColor="#000"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        android:orientation="horizontal"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="2dp"
