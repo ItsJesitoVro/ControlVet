@@ -14,7 +14,7 @@ public class Mainwebloc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainwebloc);
         WebView myWebView = (WebView) findViewById(R.id.webView1);
-        myWebView.loadUrl("https://goo.gl/maps/mc6aGgExZsB3EZjy5");
+        myWebView.loadUrl("https://maps.app.goo.gl/hbefHUj5dkQe4ksr9");
     }
     public void Regresar(View view){
         Intent regresar = new Intent(this, MainActivity.class);
