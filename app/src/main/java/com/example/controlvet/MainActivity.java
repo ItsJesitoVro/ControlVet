@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 nuevoregistro();
                 return true;
             case R.id.menuBuscar:
-                registroBuscar();
+                map();
                 return true;
             case R.id.menuVer:
                 verRegistro();
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void registroBuscar(){
-        Intent intent = new Intent(this, ver_datos.class);
+        Intent intent = new Intent(this, webb.class);
         startActivity(intent);
     }
 
@@ -174,6 +174,11 @@ public class MainActivity extends AppCompatActivity {
     public void irweb(){
         Intent irweb = new Intent(this, webb.class);
         startActivity(irweb);
+    }
+
+    public void map(){
+        Intent irmap = new Intent(this, Mainwebloc.class);
+        startActivity(irmap);
     }
 
     public void Irmap(View view){
