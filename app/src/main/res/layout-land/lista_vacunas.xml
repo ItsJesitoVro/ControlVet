@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="MicroChip: "
+            android:textColor="#1565c0"
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/viewMicroChip"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Numero de serie del chip"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textStyle="bold">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Vacuna Aplicada: "
+            android:textColor="#1565c0"
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/viewVacuna"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="vacuna"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Diluente Aplicado:"
+            android:textColor="#1565c0"
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/viewDiluente"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="diluente"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Fecha Aplicación:"
+            android:textColor="#1565c0"
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/viewAplicacion"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Aplicación"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Fecha de Proxima Vacuna:"
+            android:textColor="#1565c0"
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/viewProxima"
+            android:layout_width="276dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="proxima"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+    <TextView
+        android:layout_width="800dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="#000"
+        android:backgroundTint="#6c757d" />
+    </LinearLayout>
