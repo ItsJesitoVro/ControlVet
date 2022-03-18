@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Irmap(View view){
-        Intent irmap = new Intent(this, MapsActivity02.class);
+        Intent irmap = new Intent(this, Mainwebloc.class);
         startActivity(irmap);
     }
 

@@ -14,7 +14,7 @@ public class webb extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webb);
 
-        WebView myWebView = (WebView) findViewById(R.id.webview1);
+        WebView myWebView = (WebView) findViewById(R.id.webview2);
         myWebView.loadUrl("https://www.msd-salud-animal.mx");
     }
     public void Regresar(View view){
