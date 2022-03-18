@@ -15,9 +15,9 @@
         <ImageButton
             android:id="@+id/imageButton2"
             style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:onClick="Regresar"
@@ -32,9 +32,9 @@
 
         <ImageButton
             android:id="@+id/btnLimpiar"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="10dp"
@@ -51,9 +51,9 @@
 
         <ImageButton
             android:id="@+id/btnGuardarN"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="10dp"
@@ -62,32 +62,6 @@
             android:textColor="@color/white"
             app:cornerRadius="20dp"
             app:layout_constraintStart_toEndOf="@+id/btnLimpiar"
-            app:strokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/btnEliminar"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/white"
-            app:cornerRadius="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toStartOf="@+id/btnGuardarV"
-            app:layout_constraintStart_toEndOf="@+id/imageButton2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/deleteee"
             app:strokeColor="@color/black"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -137,8 +111,8 @@
                 android:orientation="horizontal" />
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="380dp"
-                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
@@ -153,7 +127,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="380dp"
+                android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="0dp"
@@ -251,7 +225,7 @@
             </LinearLayout>
 
             <TextView
-                android:layout_width="380dp"
+                android:layout_width="match_parent"
                 android:layout_marginStart="15dp"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
@@ -264,7 +238,7 @@
             <Button
                 android:id="@+id/btnEliminar1"
                 style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="30dp"
                 android:backgroundTint="#ef233c"
