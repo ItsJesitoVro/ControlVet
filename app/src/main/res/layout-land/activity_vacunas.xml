@@ -170,6 +170,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="20dp"
                 android:hint="Ingrese el numero telefonico"
+                android:inputType="phone"
                 app:startIconDrawable="@drawable/ic_celular">
 
                 <com.google.android.material.textfield.TextInputEditText

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -17,6 +18,7 @@ import com.example.controlvet.bd.DbPropietario;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.regex.Pattern;
 
 public class agregar_datos extends AppCompatActivity {
 
@@ -148,7 +150,7 @@ public class agregar_datos extends AppCompatActivity {
         }
         if(sexo.isEmpty())
         {
-            txtsexo.setError("Ingrese el genero de la mascota");
+            txtsexo.setError("Ingrese el genéro de la mascota");
             retorno=false;
         }
         if(microchip.isEmpty())
@@ -163,7 +165,7 @@ public class agregar_datos extends AppCompatActivity {
         }
         if(celular.isEmpty())
         {
-            txtcelular.setError("Ingrese su telefono");
+            txtcelular.setError("Ingrese su teléfono");
             retorno=false;
         }
         if(direccion.isEmpty())
@@ -171,13 +173,30 @@ public class agregar_datos extends AppCompatActivity {
             txtdireccion.setError("Ingrese su dirección");
             retorno=false;
         }
-        if(correo.isEmpty())
-        {
-            txtcorreo.setError("Ingrese su correo electrónico");
+        if (checkEmail(correo)==false){
+            txtcorreo.setError("Ingrese una dirección válida");
             retorno=false;
         }
-
+        if (checkPhone(celular)==false){
+            txtcelular.setError("Ingrese un número válido");
+            retorno=false;
+        }
         return retorno;
+    }
+
+    public static final Pattern EMAIL_ADDRESS_PATTERN =
+            Pattern.compile( "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" + "\\@" + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+            "(" + "\\." + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" + ")+" );
+
+    private boolean checkEmail(String email) {
+        return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
+    }
+
+    public static final Pattern PHONE_NUMBER_PATTERN =
+            Pattern.compile("^[+]?[0-9]{10,13}$");
+
+    private boolean checkPhone(String telefono) {
+        return PHONE_NUMBER_PATTERN.matcher(telefono).matches();
     }
 
     private void limpiar(){

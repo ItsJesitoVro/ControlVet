@@ -22,6 +22,7 @@ import com.example.controlvet.bd.DbVacuna;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 public class vacunas extends AppCompatActivity {
 
@@ -202,7 +203,7 @@ public class vacunas extends AppCompatActivity {
         }
         if(Numero.isEmpty())
         {
-            txtNumero.setError("Ingrese su numero de telefono");
+            txtNumero.setError("Ingrese su número de teléfono");
             retorno=false;
         }
         if(Aplicacion.isEmpty())
@@ -215,9 +216,19 @@ public class vacunas extends AppCompatActivity {
             txtProxima.setError("Ingrese la fecha proxima de aplicación");
             retorno=false;
         }
+        if (checkPhone(Numero)==false){
+            txtNumero.setError("Ingrese un número válido");
+            retorno=false;
+        }
         return retorno;
     }
 
+    public static final Pattern PHONE_NUMBER_PATTERN =
+            Pattern.compile("^[+]?[0-9]{10,13}$");
+
+    private boolean checkPhone(String telefono) {
+        return PHONE_NUMBER_PATTERN.matcher(telefono).matches();
+    }
 
     private void limpiar(){
         txtMicroChip.setText("");
