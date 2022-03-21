@@ -95,7 +95,7 @@
             android:paddingStart="15dp"
             android:rotation="0"
             android:rotationY="0"
-            android:text="AGENDAR PROXIMA VACUNA DE LA MASCOTA"
+            android:text="AÑADIR Y AGENDAR PROXIMA VACUNA"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -191,7 +191,7 @@
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginBottom="20dp"
-                    android:hint="Ingrese la fecha proxima"
+                    android:hint="Ingrese la fecha de aplicación"
                     app:startIconDrawable="@drawable/ic_fecha_nacimiento">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -211,7 +211,7 @@
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="33dp"
                     android:backgroundTint="#358f80"
-                    android:text="Proxima Aplicación"
+                    android:text="Día de Aplicación"
                     android:textColor="@color/white"
                     android:textSize="15dp"
                     app:cornerRadius="5dp"
@@ -275,7 +275,7 @@
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginBottom="20dp"
-                    android:hint="Ingrese la fecha proxima"
+                    android:hint="Ingrese la hora a recordar"
                     app:startIconDrawable="@drawable/ic_fecha_nacimiento">
 
                     <com.google.android.material.textfield.TextInputEditText

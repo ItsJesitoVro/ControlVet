@@ -150,6 +150,22 @@
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="750dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Ingrese el color del Animal"
+                app:startIconDrawable="@drawable/ic_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -158,7 +174,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="600dp"
+                    android:layout_width="400dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="5dp"
@@ -195,22 +211,6 @@
             </LinearLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="750dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="20dp"
-                android:hint="Ingrese el color del Animal"
-                app:startIconDrawable="@drawable/ic_color">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtcolor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -272,7 +272,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="20dp"
-                android:hint="Ingrese información adicional"
+                android:hint="Ingrese información adicional (Opcional)"
                 app:startIconDrawable="@drawable/ic_extra">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -310,24 +310,6 @@
 
                 </TextView>
             </LinearLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="750dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="20dp"
-                android:hint="No. Identificación"
-                app:startIconDrawable="@drawable/ic_indentificacion">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtidentificador"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:inputType="textPersonName" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -385,7 +367,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="20dp"
-                android:hint="Correo Electronico"
+                android:hint="Correo Electronico (Opcional)"
                 app:startIconDrawable="@drawable/ic_correo">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtcorreo"
@@ -400,7 +382,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="20dp"
-                android:hint="Datos Adicionales"
+                android:hint="Datos Adicionales (Opcional)"
                 app:startIconDrawable="@drawable/ic_extra">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtextras2"
