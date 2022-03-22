@@ -85,6 +85,6 @@
         android:backgroundTint="#fff"
         android:onClick="Regresar"
         app:cornerRadius="20dp"
-        app:srcCompat="@drawable/returnnn"
+        app:srcCompat="@drawable/regresarflecha"
         tools:ignore="SpeakableTextPresentCheck" />
 </LinearLayout>

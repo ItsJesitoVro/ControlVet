@@ -32,10 +32,10 @@
                 app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/returnnn"
+                app:srcCompat="@drawable/regresarflecha"
                 app:strokeColor="@color/black"
                 tools:ignore="SpeakableTextPresentCheck"
-                tools:srcCompat="@drawable/returnnn" />
+                tools:srcCompat="@drawable/regresarflecha" />
         </LinearLayout>
         <WebView
             android:id="@+id/webview2"

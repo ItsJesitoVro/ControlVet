@@ -19,7 +19,7 @@
         android:backgroundTint="#79FF0000"
         android:onClick="Regresar"
         app:cornerRadius="20dp"
-        app:srcCompat="@drawable/returnnn"
+        app:srcCompat="@drawable/regresarflecha"
         app:strokeColor="@color/black"
         tools:ignore="SpeakableTextPresentCheck" />
 

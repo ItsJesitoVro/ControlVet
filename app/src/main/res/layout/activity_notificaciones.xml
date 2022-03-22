@@ -7,66 +7,6 @@
     android:orientation="vertical"
     tools:context=".notificaciones">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:onClick="Regresar"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/returnnn"
-            app:strokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/btnLimpiar"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/white"
-            app:cornerRadius="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toStartOf="@+id/btnGuardarV"
-            app:layout_constraintStart_toEndOf="@+id/imageButton2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/updateee"
-            app:strokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageButton
-            android:id="@+id/btnGuardarN"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/white"
-            android:src="@drawable/saveddd"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp"
-            app:layout_constraintStart_toEndOf="@+id/btnLimpiar"
-            app:strokeColor="@color/black"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -224,12 +164,73 @@
                     app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
             </LinearLayout>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_marginStart="15dp"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:onClick="Regresar"
+                    android:textColor="@color/white"
+                    app:cornerRadius="20dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/regresarflecha"
+                    app:strokeColor="@color/black"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnLimpiar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/white"
+                    app:cornerRadius="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView"
+                    app:layout_constraintEnd_toStartOf="@+id/btnGuardarV"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/limpiarcajass"
+                    app:strokeColor="@color/black"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnGuardarN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/guardarssf"
+                    android:textColor="@color/white"
+                    app:cornerRadius="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/btnLimpiar"
+                    app:strokeColor="@color/black"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
                 android:text="Nota: Si pones una fecha anterior a la actual no se te notificara nada"
+                android:textColor="#000"
                 android:textSize="20dp">
 
 
@@ -238,14 +239,16 @@
             <Button
                 android:id="@+id/btnEliminar1"
                 style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
                 android:backgroundTint="#ef233c"
                 android:text="Eliminar Recordatorio"
                 android:textColor="@color/white"
-                app:cornerRadius="20dp"
+                app:cornerRadius="10dp"
                 app:strokeColor="#ef233c" />
+
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
