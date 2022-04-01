@@ -13,10 +13,9 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/imglogo"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginBottom="-10dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/perrito" />
 
@@ -177,6 +176,26 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button3"
+                app:strokeColor="#0077b6" />
+
+            <Button
+                android:id="@+id/btnchat"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#0077b6"
+                android:text="@string/Chat"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:icon="@android:drawable/stat_notify_chat"
+                app:iconSize="50dp"
+                app:iconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button6"
                 app:strokeColor="#0077b6" />
 
             <Button

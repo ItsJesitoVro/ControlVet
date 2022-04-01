@@ -276,7 +276,7 @@
                     android:id="@+id/txtcelular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
+                    android:inputType="phone" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -312,7 +312,7 @@
                     android:id="@+id/txtcorreo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
+                    android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
 

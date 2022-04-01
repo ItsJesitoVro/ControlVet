@@ -13,4 +13,5 @@
     <string name="Eliminar_Datos">Eliminar Datos</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_maps02">MapsActivity02</string>
+    <string name="Chat">Chat</string>
 </resources>
