@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.controlvet"
+    package="com.example.notific"
     android:versionCode="3"
     android:versionName="1.2">
 
@@ -16,39 +16,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlVet2">
         <activity
-            android:name=".Mainwebloc"
+            android:name="com.controlvet.notific.Mainwebloc"
             android:exported="false" />
         <activity
-            android:name=".webb"
+            android:name="com.controlvet.notific.webb"
             android:exported="false" />
         <activity
-            android:name=".llamadas"
+            android:name="com.controlvet.notific.llamadas"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".verVacunas2"
+            android:name="com.controlvet.notific.verVacunas2"
             android:exported="false" />
         <activity
-            android:name=".VerDatos"
+            android:name="com.controlvet.notific.VerDatos"
             android:exported="false" />
         <activity
-            android:name=".vacunas"
+            android:name="com.controlvet.notific.vacunas"
             android:exported="false" />
         <activity
-            android:name=".notificaciones"
+            android:name="com.controlvet.notific.notificaciones"
             android:exported="false" />
         <activity
-            android:name=".ver_datos"
+            android:name="com.controlvet.notific.ver_datos"
             android:exported="false" />
         <activity
-            android:name=".agregar_datos"
+            android:name="com.controlvet.notific.agregar_datos"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.controlvet.notific.MainActivity"
             android:exported="false"
             android:theme="@style/Theme.ControlVet"/>
         <activity
-            android:name=".Login"
+            android:name="com.controlvet.notific.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

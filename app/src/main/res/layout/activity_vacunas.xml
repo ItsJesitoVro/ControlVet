@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".vacunas">
+    tools:context="com.controlvet.notific.vacunas">
 
     <LinearLayout
         android:layout_marginTop="15dp"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/fondo"
-    tools:context=".ver_datos"
+    tools:context="com.controlvet.notific.ver_datos"
     android:orientation="vertical">
 
     <LinearLayout
