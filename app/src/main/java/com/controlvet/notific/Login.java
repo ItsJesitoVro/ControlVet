@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(usuario.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
+                if(usuario.getText().toString().equals("Jesito") && password.getText().toString().equals("123456")){
                     //correct
                     Toast.makeText(Login.this,"SESIÓN INICIADA CORRECTAMENTE",Toast.LENGTH_SHORT).show();
                     principal();
@@ -44,5 +44,6 @@ public class Login extends AppCompatActivity {
     public void principal(){
         Intent principal = new Intent(this, MainActivity.class);
         startActivity(principal);
+        finish();
     }
 }

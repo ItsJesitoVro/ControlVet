@@ -46,7 +46,7 @@
         <activity
             android:name="com.controlvet.notific.MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.ControlVet"/>
+            android:theme="@style/Theme.ControlVet" />
         <activity
             android:name="com.controlvet.notific.Login"
             android:exported="true">
