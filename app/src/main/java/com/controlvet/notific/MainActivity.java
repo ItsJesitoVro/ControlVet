@@ -22,15 +22,18 @@ import android.widget.Toast;
 import com.example.notific.R;
 import com.controlvet.notific.bd.DbHelper;
 import com.controlvet.notific.bd.DbMascotas;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnCrear;
+    Button btnCrear, btnCerrar;
+    FirebaseAuth autenticacion;
     int REQUEST_CODE = 200;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        autenticacion = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -39,6 +42,17 @@ public class MainActivity extends AppCompatActivity {
         verificarPermisos();
 
         btnCrear = findViewById(R.id.btnCrear);
+        btnCerrar = findViewById(R.id.btncerrar);
+
+        btnCerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                autenticacion.signOut();
+                finish();
+                startActivity(new Intent(MainActivity.this, Login.class));
+                Toast.makeText(MainActivity.this, "Haz cerrado sesión satisfactoriamente", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
