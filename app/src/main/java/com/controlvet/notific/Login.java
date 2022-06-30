@@ -89,7 +89,7 @@ public class Login extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Login.this, "No hay acceso a Internet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Login.this, "REGISTRATE!!", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -47,10 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btnCerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                autenticacion.signOut();
-                finish();
-                startActivity(new Intent(MainActivity.this, Login.class));
-                Toast.makeText(MainActivity.this, "Haz cerrado sesión satisfactoriamente", Toast.LENGTH_SHORT).show();
+                cerrar();
             }
         });
 
@@ -99,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
+            case R.id.salir:
+                cerrar();
+                return true;
             case R.id.menuNuevo:
                 nuevoregistro();
                 return true;
@@ -203,5 +203,11 @@ public class MainActivity extends AppCompatActivity {
         } else {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},REQUEST_CODE);
         }
+    }
+    public void cerrar(){
+        autenticacion.signOut();
+        finish();
+        startActivity(new Intent(MainActivity.this, Login.class));
+        Toast.makeText(MainActivity.this, "Haz cerrado sesión satisfactoriamente", Toast.LENGTH_SHORT).show();
     }
 }
