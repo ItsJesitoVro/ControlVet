@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlVet2">
         <activity
+            android:name=".registrarse"
+            android:exported="false" />
+        <activity
             android:name="com.controlvet.notific.Mainwebloc"
             android:exported="false" />
         <activity
