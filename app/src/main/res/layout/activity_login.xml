@@ -57,7 +57,7 @@
         android:textColorHint="@color/white" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_registro"
+        android:id="@+id/btniniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/contraseña"
@@ -70,23 +70,24 @@
         android:text="INICIAR" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/registro"
+        android:id="@+id/btnregistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_registro"
+        android:layout_below="@+id/btniniciar"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/design_default_color_secondary"
+        android:onClick="registrar"
         android:text="REGISTRASE" />
 
     <TextView
         android:id="@+id/txtolvidar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_registro"
+        android:layout_below="@id/btniniciar"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="68dp"
@@ -111,12 +112,13 @@
         android:layout_alignParentBottom="true"
         android:gravity="center">
 
-
-        <ImageView
+        <ImageButton
+            android:id="@+id/btngmail"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="20dp"
-            android:src="@drawable/google"/>
+            android:background="@color/white"
+            android:src="@drawable/googlebtn" />
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"

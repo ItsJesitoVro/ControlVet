@@ -44,7 +44,8 @@ public class registrarse extends AppCompatActivity {
         name = findViewById(R.id.nombre);
         email = findViewById(R.id.correo);
         password = findViewById(R.id.contraseña);
-        btn_register = findViewById(R.id.btn_registro);
+        btn_register = findViewById(R.id.btnregister);
+
 
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,10 +57,19 @@ public class registrarse extends AppCompatActivity {
                 if (nameUser.isEmpty() && emailUser.isEmpty() && passUser.isEmpty()){
                     Toast.makeText(registrarse.this, "Complete los datos", Toast.LENGTH_SHORT).show();
                 }else{
+                    Toast.makeText(registrarse.this, "Se ha registrado su cuenta", Toast.LENGTH_SHORT).show();
                     registerUser(nameUser, emailUser, passUser);
+                    regresar();
                 }
             }
         });
+
+    }
+
+    public void regresar(){
+        Intent regresar = new Intent(this, MainActivity.class);
+        startActivity(regresar);
+        finish();
     }
 
     private void registerUser(String nameUser, String emailUser, String passUser) {
@@ -102,3 +112,5 @@ public class registrarse extends AppCompatActivity {
     }
 
     }
+
+

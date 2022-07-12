@@ -21,6 +21,7 @@ import com.google.firebase.database.*;
 
 public class Login extends AppCompatActivity {
 
+    Button btnregistrar;
     FirebaseAuth autentificacion;
 
     @Override
@@ -35,11 +36,12 @@ public class Login extends AppCompatActivity {
         EditText usuario, password;
         Button loginbtn, reg;
 
+        btnregistrar = findViewById(R.id.btnregistrar);
+
         usuario = findViewById(R.id.nombre);
         password = findViewById(R.id.contraseña);
 
-        loginbtn = findViewById(R.id.btn_registro);
-        reg = findViewById(R.id.registro);
+        loginbtn = findViewById(R.id.btniniciar);
 
         //admin and admin
 
@@ -55,12 +57,17 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public void principal(){
         Intent principal = new Intent(this, MainActivity.class);
         startActivity(principal);
+        finish();
+    }
+
+    public void registrar(View view){
+        Intent registrar = new Intent(this, registrarse.class);
+        startActivity(registrar);
         finish();
     }
 
