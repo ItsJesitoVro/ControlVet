@@ -2,6 +2,8 @@ package com.controlvet.notific;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.notific.R;
@@ -26,10 +29,14 @@ import com.google.firebase.auth.*;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.*;
 
+import java.util.concurrent.Executor;
+
 public class Login extends AppCompatActivity {
 
-    Button btnregistrar;
-    ImageButton btngmail1;
+    private Button btnregistrar, loginbtn;
+    private ImageButton btngmail1;
+    private EditText usuario, password;
+    private TextView txtsesion;
     private FirebaseAuth autentificacion;
     private GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 123;
@@ -43,6 +50,11 @@ public class Login extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    private Executor executor;
+    private BiometricPrompt biometricPrompt;
+    private BiometricPrompt.PromptInfo promptInfo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,20 +62,51 @@ public class Login extends AppCompatActivity {
         autentificacion = FirebaseAuth.getInstance();
         createRequest();
 
-
-
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference myRef = db.getReference("message");
-
-        EditText usuario, password;
-        Button loginbtn, reg;
 
         btnregistrar = findViewById(R.id.btnregistrar);
         btngmail1 = findViewById(R.id.btngmail);
         usuario = findViewById(R.id.nombre);
         password = findViewById(R.id.contraseña);
         loginbtn = findViewById(R.id.btniniciar);
+        txtsesion = (TextView)findViewById(R.id.txtsesion);
 
+        //handle autenticacion click, start
+
+        executor = ContextCompat.getMainExecutor(this);
+        biometricPrompt = new BiometricPrompt(Login.this, executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                /*ERRORES CUANDO NO ES COMPATIBLE
+                ERRORES CUANDO NO ES COMPATIBLE txtsesion.setText("Error en la autenticacion, tipo: " + errorCode);
+                Toast.makeText(Login.this, "Error en la autenticacion, tipo: " + errorCode, Toast.LENGTH_SHORT).show();*/
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                //Inicio correcto
+                //txtsesion.setText("Autenticacion exitosa");
+                Toast.makeText(Login.this, "Autenticacion exitosa", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+                //El dedo no coencide
+                //txtsesion.setText("Autenticacion no coencide");
+                Toast.makeText(Login.this, "Vuelve a intentar", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Autorizacion por Huella")
+                .setSubtitle("Coloque su huella para verificar su identidad")
+                .setNegativeButtonText("Usa tu contraseña")
+                .build();
         //admin and admin
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -72,8 +115,10 @@ public class Login extends AppCompatActivity {
                 String usuario1 = usuario.getText().toString().trim();
                 String contra = password.getText().toString().trim();
                 if(usuario1.isEmpty() && contra.isEmpty()){
+                    biometricPrompt.authenticate(promptInfo);
                     Toast.makeText(Login.this, "Ingrese los datos", Toast.LENGTH_SHORT).show();
                 } else {
+                    biometricPrompt.authenticate(promptInfo);
                     userLogin(usuario1,contra);
                 }
             }
@@ -82,6 +127,7 @@ public class Login extends AppCompatActivity {
         btngmail1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                biometricPrompt.authenticate(promptInfo);
                 signIn();
             }
         });
@@ -131,10 +177,9 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = autentificacion.getCurrentUser();
+                            finish();
                             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                             startActivity(intent);
-
-
                         } else {
                             Toast.makeText(Login.this, "Sorry auth failed.", Toast.LENGTH_SHORT).show();
 
@@ -156,7 +201,6 @@ public class Login extends AppCompatActivity {
     public void registrar(View view){
         Intent registrar = new Intent(this, registrarse.class);
         startActivity(registrar);
-        finish();
     }
 
 
@@ -170,7 +214,7 @@ public class Login extends AppCompatActivity {
                     startActivity(new Intent(Login.this, MainActivity.class));
                     Toast.makeText(Login.this, "Bienvenido!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(Login.this, "Error, verificar sus datos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Error, verificar sus datos o...", Toast.LENGTH_SHORT).show();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

@@ -118,17 +118,8 @@
             android:layout_height="48dp"
             android:layout_margin="20dp"
             android:background="@color/white"
-            android:src="@drawable/googlebtn" />
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="20dp"
-            android:src="@drawable/fb"/>
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="20dp"
-            android:src="@drawable/twitter"/>
+            android:src="@drawable/googlebtn"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>
 

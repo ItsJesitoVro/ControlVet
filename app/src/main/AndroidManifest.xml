@@ -4,9 +4,14 @@
     android:versionCode="3"
     android:versionName="1.2">
 
+    <!-- Permisos para la aplicacion -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
 
     <application
         android:allowBackup="true"
@@ -15,9 +20,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlVet2">
-        <activity
-            android:name=".Profile"
-            android:exported="false" />
         <activity
             android:name="com.controlvet.notific.Mainwebloc"
             android:exported="false" />
