@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "131560851950-8p1upc24n68q7b8010r9fceg0curhnbu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.controlvet.notific",
+            "certificate_hash": "6c48fd0ed728075ac36ffebbdc0d83e7dbb9a920"
+          }
+        },
+        {
           "client_id": "131560851950-od5s13p84kkutgtm2d3v14c0p7t6qimn.apps.googleusercontent.com",
           "client_type": 3
         }

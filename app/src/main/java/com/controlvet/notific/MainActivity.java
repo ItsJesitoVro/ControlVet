@@ -1,10 +1,5 @@
 package com.controlvet.notific;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,9 +14,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.notific.R;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import com.controlvet.notific.bd.DbHelper;
 import com.controlvet.notific.bd.DbMascotas;
+import com.example.notific.CrearArticulo;
+import com.example.notific.PrincipalOtros;
+import com.example.notific.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -193,6 +195,17 @@ public class MainActivity extends AppCompatActivity {
         Intent irmap = new Intent(this, Mainwebloc.class);
         startActivity(irmap);
     }
+
+    public void Otros(View view){
+        Intent irmap = new Intent(this, CrearArticulo.class);
+        startActivity(irmap);
+    }
+
+    public void main2(View view){
+        Intent ir = new Intent(this, PrincipalOtros.class);
+        startActivity(ir);
+    }
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void verificarPermisos(){
