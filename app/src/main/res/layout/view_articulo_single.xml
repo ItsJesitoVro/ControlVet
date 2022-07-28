@@ -47,6 +47,18 @@
             </LinearLayout>
 
         </LinearLayout>
+        <ImageButton
+            android:id="@+id/btn_editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3F6BF1"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
 
         <ImageButton
             android:id="@+id/btn_eliminar"

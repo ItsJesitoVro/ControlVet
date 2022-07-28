@@ -8,6 +8,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,11 +21,13 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 
 public class ImagenArticulo extends AppCompatActivity {
@@ -31,11 +35,11 @@ public class ImagenArticulo extends AppCompatActivity {
     Button btn_add;
     Button btn_cu_photo, btn_r_photo;
     LinearLayout linearLayout_image_btn;
-    EditText name, des, prec, precio_vacuna;
+    EditText name, des, prec;
     private FirebaseFirestore mfirestore;
     private FirebaseAuth mAuth;
     StorageReference storageReference;
-    String storage_path = "pet/*";
+    String storage_path = "Articulo/*";
 
     private static final int COD_SEL_STORAGE = 200;
     private static final int COD_SEL_IMAGE = 300;
@@ -131,6 +135,5 @@ public class ImagenArticulo extends AppCompatActivity {
             }
         });
     }
-
 
 }

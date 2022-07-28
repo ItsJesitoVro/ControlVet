@@ -2,14 +2,16 @@ package com.model;
 
 public class Articulo {
 
-    String Nombre, Descripcion, Precio;
+    String Nombre, Descripcion, Precio,photo;
 
     public Articulo() {}
 
-    public Articulo(String nombre, String descripcion, String precio) {
+    public Articulo(String nombre, String descripcion, String precio, String photo) {
         Nombre = nombre;
         Descripcion = descripcion;
         Precio = precio;
+        photo = photo;
+
     }
 
     public String getNombre() {
@@ -34,5 +36,13 @@ public class Articulo {
 
     public void setPrecio(String precio) {
         Precio = precio;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

@@ -20,19 +20,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <SearchView
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
-            android:queryHint="Buscar" />
-
         <Button
             android:id="@+id/btn_close"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FF401F"
+            android:onClick="MAin"
             android:text="Regresar"
             app:cornerRadius="50dp" />
 
@@ -46,9 +39,9 @@
                 android:id="@+id/btn_add_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:backgroundTint="@color/purple_500"
-                android:text="agregar fragment"
+                android:onClick="AgregarArt"
+                android:text="Agregar Articulo"
                 android:textSize="10sp"
                 app:cornerRadius="50dp" />
 
@@ -56,15 +49,6 @@
                 android:layout_width="15dp"
                 android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/btn_add"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/purple_700"
-                android:text="agregar activity"
-                android:textSize="10sp"
-                app:cornerRadius="50dp" />
         </LinearLayout>
 
         <Space
