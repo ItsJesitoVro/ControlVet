@@ -19,9 +19,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.adapter.ArticuloAdapter;
 import com.controlvet.notific.bd.DbHelper;
 import com.controlvet.notific.bd.DbMascotas;
 import com.example.notific.CrearArticulo;
+import com.example.notific.ImagenArticulo;
 import com.example.notific.PrincipalOtros;
 import com.example.notific.R;
 import com.google.firebase.auth.FirebaseAuth;

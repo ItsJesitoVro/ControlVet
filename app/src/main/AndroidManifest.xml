@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlVet2">
         <activity
+            android:name=".ImagenArticulo"
+            android:exported="false" />
+        <activity
             android:name=".PrincipalOtros"
             android:exported="false" />
         <activity
