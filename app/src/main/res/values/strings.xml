@@ -9,7 +9,7 @@
     <string name="web">Ir a la web</string>
     <string name="todo">TODO</string>
     <string name="map">MAPA</string>
-    <string name="base_de_datos">Base de datos</string>
+    <string name="base_de_datos">Base de datos (Desarrollador)</string>
     <string name="Eliminar_Datos">Eliminar Datos</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_maps02">MapsActivity02</string>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.controlvet.notific"
-    android:versionCode="3"
-    android:versionName="1.2">
+    android:versionCode="4"
+    android:versionName="2.0">
+
     <!-- Permisos para la aplicacion -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -19,16 +20,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlVet2">
         <activity
-            android:name=".ImagenArticulo"
+            android:name="com.example.notific.ImagenArticulo"
             android:exported="false" />
         <activity
-            android:name=".PrincipalOtros"
+            android:name="com.example.notific.PrincipalOtros"
             android:exported="false" />
         <activity
-            android:name=".mainOtros"
-            android:exported="false" />
-        <activity
-            android:name=".CrearArticulo"
+            android:name="com.example.notific.CrearArticulo"
             android:exported="false" />
         <activity
             android:name="com.controlvet.notific.Mainwebloc"
@@ -65,9 +63,11 @@
         <activity
             android:name="com.controlvet.notific.registrarse"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.ControlVet" />
         <activity
             android:name="com.controlvet.notific.Login"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
