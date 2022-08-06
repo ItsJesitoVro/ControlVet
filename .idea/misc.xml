@@ -72,11 +72,21 @@
         <entry key="..\:/Users/User/Documents/GitHub/ControlVet/app/src/main/res/layout/activity_webb.xml" value="0.12" />
         <entry key="..\:/Users/User/Documents/GitHub/ControlVet/app/src/main/res/layout/lista_vacunas.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/drawable/btnimg.xml" value="0.2555" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout-land/activity_agregar_datos.xml" value="0.21164021164021163" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_agregar_datos.xml" value="0.25" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_chat.xml" value="0.25" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_crear_articulo.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_llamadas.xml" value="0.25" />
         <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_login.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_mainwebloc.xml" value="0.25" />
         <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_principal_otros.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_registrarse.xml" value="0.25" />
-        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/view_articulo_single.xml" value="0.21784420289855072" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_ver_datos.xml" value="0.25" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_webb.xml" value="0.25" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/lista_dueno.xml" value="0.25" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/view_articulo_single.xml" value="0.1" />
+        <entry key="..\:/Users/itsje/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/menu/menu_principal.xml" value="0.25" />
       </map>
     </option>
   </component>

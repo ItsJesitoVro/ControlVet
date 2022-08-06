@@ -35,5 +35,6 @@
 
     <item
         android:id="@+id/menuBD"
-        android:title="Crear BD (Desarrollador)" />
+        android:title="Crear BD (Desarrollador)"
+        android:visible="false" />
 </menu>

@@ -6,8 +6,8 @@
     tools:context=".CrearArticulo">
 
     <LinearLayout
-        android:layout_width="382dp"
-        android:layout_height="311dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -61,7 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="MAin"
-            android:text="Regresar" />
+            android:text="Regresar"
+            android:backgroundTint="#FF401F"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

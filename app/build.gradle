@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
+    id 'com.google.firebase.appdistribution'
 }
 
 android {
@@ -10,8 +11,8 @@ android {
         applicationId "com.controlvet.notific"
         minSdk 24
         targetSdk 31
-        versionCode 2
-        versionName "1.1"
+        versionCode 7
+        versionName '2.0.4'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -36,22 +37,22 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 dependencies {
-    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation platform('com.google.firebase:firebase-bom:30.3.1')
     implementation 'com.google.android.gms:play-services-auth:20.2.0'
-    implementation 'com.firebaseui:firebase-ui-firestore:4.3.2'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
-    implementation 'androidx.navigation:navigation-fragment:2.3.5'
-    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.1'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.5.1'
+    implementation 'androidx.navigation:navigation-ui:2.5.1'
     implementation 'com.google.firebase:firebase-auth'
-    implementation 'com.google.firebase:firebase-firestore:24.2.0'
+    implementation 'com.google.firebase:firebase-firestore:24.2.1'
     implementation 'com.google.firebase:firebase-database:20.0.5'
     implementation 'com.google.firebase:firebase-analytics:21.1.0'
     implementation 'com.google.firebase:firebase-storage:20.0.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation 'androidx.work:work-runtime:2.8.0-alpha01'
+    implementation 'androidx.work:work-runtime:2.8.0-alpha02'
     implementation "androidx.biometric:biometric:1.1.0"
 }
