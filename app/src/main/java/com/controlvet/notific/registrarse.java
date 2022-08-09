@@ -1,14 +1,14 @@
 package com.controlvet.notific;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.notific.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class registrarse extends AppCompatActivity {
 
@@ -50,18 +51,20 @@ public class registrarse extends AppCompatActivity {
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nameUser = name.getText().toString().trim();
-                String emailUser = email.getText().toString().trim();
-                String passUser = password.getText().toString().trim();
+                if (validar()){
+                    String nameUser = name.getText().toString().trim();
+                    String emailUser = email.getText().toString().trim();
+                    String passUser = password.getText().toString().trim();
 
-                if (nameUser.isEmpty() && emailUser.isEmpty() && passUser.isEmpty()){
+                if (nameUser.isEmpty() && emailUser.isEmpty() && passUser.isEmpty()) {
                     Toast.makeText(registrarse.this, "Complete los datos", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     Toast.makeText(registrarse.this, "Se ha registrado su cuenta", Toast.LENGTH_SHORT).show();
                     registerUser(nameUser, emailUser, passUser);
                     regresar();
                 }
             }
+        }
         });
 
     }
@@ -73,36 +76,41 @@ public class registrarse extends AppCompatActivity {
     }
 
     private void registerUser(String nameUser, String emailUser, String passUser) {
-        mAuth.createUserWithEmailAndPassword(emailUser, passUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                String id = mAuth.getCurrentUser().getUid();
-                Map<String, Object> map = new HashMap<>();
-                map.put("id", id);
-                map.put("name", nameUser);
-                map.put("email", emailUser);
-                map.put("password", passUser);
+        if (validar()){
+            mAuth.createUserWithEmailAndPassword(emailUser, passUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (validar()){
+                        String id = mAuth.getCurrentUser().getUid();
+                        Map<String, Object> map = new HashMap<>();
+                        map.put("id", id);
+                        map.put("name", nameUser);
+                        map.put("email", emailUser);
+                        map.put("password", passUser);
 
-                mFirestore.collection("user").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        finish();
-                        startActivity(new Intent(registrarse.this, MainActivity.class));
-                        Toast.makeText(registrarse.this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(registrarse.this, "Error al guardar", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    mFirestore.collection("user").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            if(validar()){
+                            finish();
+                            startActivity(new Intent(registrarse.this, MainActivity.class));
+                            Toast.makeText(registrarse.this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show();
+                        }}
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(registrarse.this, "Error al guardar", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
             }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(registrarse.this, "Error al registrar", Toast.LENGTH_SHORT).show();
-            }
-        });
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(registrarse.this, "Error al registrar", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
     @Override
@@ -111,6 +119,30 @@ public class registrarse extends AppCompatActivity {
         return false;
     }
 
+    public static final Pattern EMAIL_ADDRESS_PATTERN =
+            Pattern.compile( "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" + "\\@" + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                    "(" + "\\." + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" + ")+" );
+
+    private boolean checkEmail(String email) {
+        return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
+    }
+     public boolean validar(){
+         boolean retorno = true;
+         String correo = email.getText().toString();
+         String nombre = name.getText().toString();
+         String contra = password.getText().toString();
+         if (checkEmail(correo)==false){
+             email.setError("La cuenta debe de tener un @ y debe de estar en algun dominio (ejemplo .com, .edu, .mx)");
+             retorno=false;
+         } if(nombre.isEmpty()){
+             name.setError("Ingrese su nombre");
+             retorno=false;
+         } if(contra.isEmpty()){
+             password.setError("Ingrese su contraseña");
+             retorno=false;
+         }
+         return retorno;
+     }
     }
 
 
