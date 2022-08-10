@@ -4,25 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:backgroundTint="#F5F5F5"
     tools:context=".PrincipalOtros">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        android:orientation="vertical">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewSingle"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginBottom="20dp" />
+            android:layout_height="667dp" />
 
         <Button
             android:id="@+id/btn_close"
@@ -33,26 +37,14 @@
             android:text="Regresar"
             app:cornerRadius="50dp" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btn_add_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_add_fragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/purple_500"
-                android:onClick="AgregarArt"
-                android:text="Agregar Articulo"
-                app:cornerRadius="50dp" />
-
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
+            android:backgroundTint="@color/purple_500"
+            android:onClick="AgregarArt"
+            android:text="Agregar Articulo"
+            app:cornerRadius="50dp" />
 
     </LinearLayout>
 

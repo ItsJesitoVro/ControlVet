@@ -37,7 +37,9 @@ public class PrincipalOtros extends AppCompatActivity {
         Query query = mFirestore.collection("Articulos");
 
         FirestoreRecyclerOptions<Articulo> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Articulo>().setQuery(query, Articulo.class).build();
+        //Referenciamos dentro del vector
         mAdapter = new ArticuloAdapter(firestoreRecyclerOptions,this);
+        mAdapter.notifyDataSetChanged();
         mRecycler.setAdapter(mAdapter);
     }
 

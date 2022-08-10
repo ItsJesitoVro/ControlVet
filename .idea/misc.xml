@@ -20,15 +20,23 @@
         <entry key="..\:/Users/Jesito/Desktop/Proyecto Estancia/ControlVet/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/drawable/ic_delete.xml" value="0.1075" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/drawable/ic_edit.xml" value="0.1075" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout-land/activity_vacunas.xml" value="0.31875" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_chat.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_crear_articulo.xml" value="0.22" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_imagen_articulo.xml" value="0.27717391304347827" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_llamadas.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_login.xml" value="0.18667679837892603" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_main_otros.xml" value="0.27717391304347827" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_notificaciones.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_principal_otros.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_profile.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_registrarse.xml" value="0.27717391304347827" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_vacunas.xml" value="0.27717391304347827" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_ver_datos.xml" value="0.27717391304347827" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/activity_webb.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/fragment_create_art.xml" value="0.27717391304347827" />
-        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/view_articulo_single.xml" value="0.22" />
+        <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout/view_articulo_single.xml" value="0.225" />
         <entry key="..\:/Users/Jesus/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/menu/menu_principal.xml" value="0.38385416666666666" />
         <entry key="..\:/Users/Jezer Alfredo/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2555" />
         <entry key="..\:/Users/Jezer Alfredo/OneDrive/Documentos/GitHub/ControlVet/app/src/main/res/layout-land/activity_agregar_datos.xml" value="0.21164021164021163" />

@@ -151,7 +151,6 @@ public class Login extends AppCompatActivity {
                 .build();
 
 
-        // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
@@ -163,7 +162,6 @@ public class Login extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
@@ -184,7 +182,6 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = autentificacion.getCurrentUser();
                             finish();
                             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
@@ -195,8 +192,6 @@ public class Login extends AppCompatActivity {
 
                         }
 
-
-                        // ...
                     }
                 });
     }
